@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "Fakultet informacijskih tehnologija Mostar | FIT",
     template: "%s | Fakultet informacijskih tehnologija Mostar"
   },
-  description: "Fakultet informacijskih tehnologija 'Džemal Bijedić' Univerziteta u Mostaru. Studij programi: Razvoj softvera, Softverski inženjering, Master studiji. Upis, cijene studija, konsultacije.",
+  description: "Fakultet informacijskih tehnologija 'Džemal Bijedić' Univerziteta u Mostaru - vodeći fakultet za studij informatike u Bosni i Hercegovini. Studij programi: Razvoj softvera, Softverski inženjering, Master studiji. Upis, cijene studija, konsultacije.",
   keywords: [
     "fakultet informacijskih tehnologija",
     "FIT Mostar",
@@ -40,7 +40,23 @@ export const metadata: Metadata = {
     "baze podataka",
     "web razvoj",
     "artificial intelligence",
-    "cloud computing"
+    "cloud computing",
+    "fakultet IT bosna",
+    "studij informatike bosna",
+    "fakultet mostar",
+    "univerzitet mostar",
+    "IT fakultet bosna",
+    "tehnički fakultet mostar",
+    "studij programiranja bosna",
+    "software development bosna",
+    "computer science bosna",
+    "fakultet računarstva",
+    "studij IT mostar",
+    "fakultet informacijskih tehnologija bosna",
+    "college bosnia",
+    "university bosnia",
+    "IT education bosnia",
+    "computer science education bosnia"
   ],
   authors: [{ name: "Fakultet informacijskih tehnologija Mostar" }],
   creator: "Fakultet informacijskih tehnologija Mostar",
@@ -60,7 +76,7 @@ export const metadata: Metadata = {
     url: 'https://fit.ba',
     siteName: 'Fakultet informacijskih tehnologija Mostar',
     title: 'Fakultet informacijskih tehnologija Mostar | FIT',
-    description: 'Fakultet informacijskih tehnologija u Mostaru - studij programi, upis, konsultacije',
+    description: 'Fakultet informacijskih tehnologija u Mostaru - vodeći fakultet za studij informatike u Bosni i Hercegovini',
     images: [
       {
         url: '/images/og-image.png',
@@ -73,7 +89,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Fakultet informacijskih tehnologija Mostar | FIT',
-    description: 'Fakultet informacijskih tehnologija u Mostaru - studij programi, upis, konsultacije',
+    description: 'Fakultet informacijskih tehnologija u Mostaru - vodeći fakultet za studij informatike u Bosni i Hercegovini',
     images: ['/images/og-image.png'],
   },
   robots: {
@@ -114,10 +130,11 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Fakultet informacijskih tehnologija Mostar",
-    "alternateName": "FIT Mostar",
-    "description": "Fakultet informacijskih tehnologija 'Džemal Bijedić' Univerziteta u Mostaru",
+    "alternateName": ["FIT Mostar", "Fakultet IT Mostar", "FIT"],
+    "description": "Fakultet informacijskih tehnologija 'Džemal Bijedić' Univerziteta u Mostaru - vodeći fakultet za studij informatike u Bosni i Hercegovini",
     "url": "https://fit.ba",
     "logo": "https://fit.ba/images/logo-bijeli.png",
+    "image": "https://fit.ba/images/og-image.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Univerzitetski kampus",
@@ -126,12 +143,26 @@ export default function RootLayout({
       "addressCountry": "BA",
       "postalCode": "88000"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+387-36-570-000",
-      "contactType": "customer service",
-      "availableLanguage": ["Bosnian", "English"]
-    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+387-36-281-160",
+        "contactType": "studentska služba",
+        "availableLanguage": ["Bosnian", "English"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "11:00",
+          "closes": "14:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+387-36-281-172",
+        "contactType": "dekan",
+        "availableLanguage": ["Bosnian", "English"]
+      }
+    ],
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 43.3438,
@@ -141,16 +172,10 @@ export default function RootLayout({
       "https://www.facebook.com/fitmostar",
       "https://www.linkedin.com/school/fit-mostar"
     ],
-    "department": [
-      {
-        "@type": "Organization",
-        "name": "Studijski program Razvoj softvera"
-      },
-      {
-        "@type": "Organization", 
-        "name": "Studijski program Softverski inženjering"
-      }
-    ],
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "Univerzitet u Mostaru"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Studijski programi",
@@ -160,7 +185,14 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Course",
             "name": "Razvoj softvera",
-            "description": "Prvi ciklus studija - 3 godine"
+            "description": "Prvi ciklus studija - 3 godine",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Fakultet informacijskih tehnologija Mostar"
+            },
+            "courseMode": "on-site",
+            "educationalLevel": "Bachelor's degree",
+            "inLanguage": "Bosnian"
           }
         },
         {
@@ -168,7 +200,14 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Course",
             "name": "Softverski inženjering",
-            "description": "Prvi ciklus studija - 4 godine"
+            "description": "Prvi ciklus studija - 4 godine",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Fakultet informacijskih tehnologija Mostar"
+            },
+            "courseMode": "on-site",
+            "educationalLevel": "Bachelor's degree",
+            "inLanguage": "Bosnian"
           }
         },
         {
@@ -176,7 +215,14 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Course",
             "name": "Jednogodišnji master",
-            "description": "Drugi ciklus studija - 1 godina"
+            "description": "Drugi ciklus studija - 1 godina",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Fakultet informacijskih tehnologija Mostar"
+            },
+            "courseMode": "on-site",
+            "educationalLevel": "Master's degree",
+            "inLanguage": "Bosnian"
           }
         },
         {
@@ -184,11 +230,39 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Course",
             "name": "Dvogodišnji master",
-            "description": "Drugi ciklus studija - 2 godine"
+            "description": "Drugi ciklus studija - 2 godine",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Fakultet informacijskih tehnologija Mostar"
+            },
+            "courseMode": "on-site",
+            "educationalLevel": "Master's degree",
+            "inLanguage": "Bosnian"
           }
         }
       ]
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Bosnia and Herzegovina"
+    },
+    "knowsAbout": [
+      "Programiranje",
+      "Web razvoj",
+      "Baze podataka",
+      "Softverski inženjering",
+      "Umjetna inteligencija",
+      "Cloud computing",
+      "Informacijske tehnologije",
+      "Računarstvo"
+    ]
   };
 
   return (

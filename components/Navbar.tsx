@@ -67,11 +67,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md border-b border-gray-100/50 shadow-sm' 
-        : 'bg-transparent'
-    }`}>
+        ? 'shadow-lg' 
+        : ''
+    }`}
+    style={{
+      backgroundColor: isScrolled ? '#912822' : 'transparent'
+    }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
@@ -83,12 +86,28 @@ const Navbar = () => {
           >
             <Link 
               href="/" 
-              className={`text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 bg-clip-text text-transparent hover:from-blue-600 hover:via-blue-700 hover:to-blue-900 transition-all duration-300 ${
-                !isScrolled ? 'text-white' : ''
-              }`}
+              className="flex items-center space-x-3"
             >
-              <span className="hidden sm:inline">{t('navbar.logo')}</span>
-              <span className="sm:hidden">{t('navbar.logoShort')}</span>
+              <div className="relative group">
+                <img 
+                  src="/images/logo-veci.png" 
+                  alt="FIT Mostar Logo" 
+                  className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:opacity-0"
+                />
+                <img 
+                  src="/images/logo-veci-hover.png" 
+                  alt="FIT Mostar Logo Hover" 
+                  className="h-10 md:h-12 w-auto transition-all duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-0"
+                />
+              </div>
+              <span className={`text-sm md:text-base lg:text-lg font-noto-serif font-bold transition-colors duration-300 ease-in-out ${
+                isScrolled 
+                  ? 'text-white hover:text-red-100' 
+                  : 'text-white hover:text-red-100'
+              }`}>
+                <span className="hidden sm:inline">{t('navbar.logo')}</span>
+                <span className="sm:hidden">{t('navbar.logoShort')}</span>
+              </span>
             </Link>
           </motion.div>
 
@@ -120,8 +139,8 @@ const Navbar = () => {
                       <button
                         className={`relative px-4 py-2 font-medium transition-all duration-300 group flex items-center space-x-1 ${
                           isScrolled 
-                            ? 'text-gray-700 hover:text-blue-600' 
-                            : 'text-white hover:text-blue-200'
+                            ? 'text-white hover:text-red-100' 
+                            : 'text-white hover:text-red-100'
                         }`}
                       >
                         <span>{item.name}</span>
@@ -130,11 +149,9 @@ const Navbar = () => {
                           (item.name === t('navbar.enrollment') && isUpisDropdownOpen) ||
                           (item.name === t('navbar.studies') && isStudijDropdownOpen) ? 'rotate-180' : ''
                         }`} />
-                        <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0 ${
-                          isScrolled 
-                            ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800' 
-                            : 'bg-white'
-                        }`}></span>
+                        <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0`}
+                          style={{ backgroundColor: '#f5f5f5' }}
+                        ></span>
                       </button>
                       
                       <AnimatePresence>
@@ -162,7 +179,7 @@ const Navbar = () => {
                                   href={(dropdownItem as { href: string }).href}
                                   target={'target' in dropdownItem ? dropdownItem.target : undefined}
                                   rel={'target' in dropdownItem && dropdownItem.target === '_blank' ? 'noopener noreferrer' : undefined}
-                                  className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 border-b border-gray-50 last:border-b-0"
+                                  className="block px-4 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 border-b border-gray-50 last:border-b-0"
                                 >
                                   {(dropdownItem as { name: string }).name}
                                 </a>
@@ -177,16 +194,14 @@ const Navbar = () => {
                       href={item.href}
                       className={`relative px-4 py-2 font-medium transition-all duration-300 group ${
                         isScrolled 
-                          ? 'text-gray-700 hover:text-blue-600' 
-                          : 'text-white hover:text-blue-200'
+                          ? 'text-white hover:text-red-100' 
+                          : 'text-white hover:text-red-100'
                       }`}
                     >
                       {item.name}
-                      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0 ${
-                        isScrolled 
-                          ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800' 
-                          : 'bg-white'
-                      }`}></span>
+                      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0`}
+                        style={{ backgroundColor: '#f5f5f5' }}
+                      ></span>
                     </a>
                   )}
                 </motion.div>
@@ -204,8 +219,8 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className={`transition-colors p-2 rounded-lg ${
                 isScrolled 
-                  ? 'text-gray-700 hover:text-blue-600 hover:bg-gray-50' 
-                  : 'text-white hover:text-blue-200 hover:bg-white/10'
+                  ? 'text-white hover:text-red-100 hover:bg-white/10' 
+                  : 'text-white hover:text-red-100 hover:bg-white/10'
               }`}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -225,7 +240,9 @@ const Navbar = () => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-4"
       >
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div className="lg:hidden border-t border-white/20 shadow-lg"
+          style={{ backgroundColor: isScrolled ? '#912822' : 'rgba(145, 40, 34, 0.95)' }}
+        >
           <div className="px-4 py-6 space-y-4">
             {menuItems.map((item, index) => (
               <div key={item.name}>
@@ -237,7 +254,7 @@ const Navbar = () => {
                         if (item.name === t('navbar.enrollment')) setIsUpisDropdownOpen(!isUpisDropdownOpen);
                         if (item.name === t('navbar.studies')) setIsStudijDropdownOpen(!isStudijDropdownOpen);
                       }}
-                      className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 text-lg font-medium transition-colors duration-200 py-2 border-b border-gray-50"
+                      className="flex items-center justify-between w-full text-white hover:text-red-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -277,7 +294,7 @@ const Navbar = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="block text-gray-600 hover:text-blue-600 text-base font-medium transition-colors duration-200 py-2"
+                                className="block text-red-100 hover:text-white text-base font-medium transition-colors duration-200 py-2"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {(dropdownItem as { name: string }).name}
@@ -294,7 +311,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="block text-gray-700 hover:text-blue-600 text-lg font-medium transition-colors duration-200 py-2 border-b border-gray-50 last:border-b-0"
+                    className="block text-white hover:text-red-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20 last:border-b-0"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, Clock, User, Tag } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
@@ -82,140 +81,91 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6"
-          >
-            <Tag className="w-4 h-4 mr-2" />
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
             {t('news.title')}
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            {t('news.subtitle').split(' ').slice(0, 2).join(' ')}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800">
-              {t('news.subtitle').split(' ').slice(2).join(' ')}
-            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-gt-america">
             {t('news.description')}
           </p>
-        </motion.div>
+        </div>
 
         {/* Featured News Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 mb-16"
-        >
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-16 hover:shadow-md transition-shadow duration-200">
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Image */}
-            <motion.div 
-              className="relative h-64 lg:h-full overflow-hidden group"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div className="relative h-64 lg:h-full overflow-hidden">
               <img
                 src={featuredNews.image}
                 alt={featuredNews.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               
               {/* Category Badge */}
               <div className="absolute top-6 left-6">
-                <span className="inline-flex items-center px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 text-sm font-medium rounded-full">
+                <span className="inline-flex items-center px-3 py-1 bg-white/90 text-gray-800 text-sm font-medium rounded">
                   {featuredNews.category}
                 </span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Content */}
             <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                {/* Meta Info */}
-                <div className="flex items-center text-gray-500 mb-6 space-x-4">
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium">{featuredNews.date}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <User className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium">{featuredNews.author}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium">{featuredNews.readTime}</span>
-                  </div>
+              {/* Meta Info */}
+              <div className="flex items-center text-gray-500 mb-6 space-x-4">
+                <div className="flex items-center">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span className="text-sm font-medium">{featuredNews.date}</span>
                 </div>
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2" />
+                  <span className="text-sm font-medium">{featuredNews.author}</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span className="text-sm font-medium">{featuredNews.readTime}</span>
+                </div>
+              </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                  {featuredNews.title}
-                </h3>
+              <h3 className="text-2xl lg:text-3xl font-noto-serif font-bold text-gray-900 mb-6 leading-tight">
+                {featuredNews.title}
+              </h3>
 
-                <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                  {featuredNews.description}
-                </p>
+              <p className="text-gray-600 mb-8 leading-relaxed text-lg font-gt-america">
+                {featuredNews.description}
+              </p>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => handleOpenModal(featuredNews)}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group text-lg"
-                >
-                  {t('common.readMore')}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
-              </motion.div>
+              <button
+                onClick={() => handleOpenModal(featuredNews)}
+                className="inline-flex items-center text-red-800 hover:text-red-900 font-gt-america font-medium text-lg"
+              >
+                {t('common.readMore')}
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Recent News Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {recentNews.map((news, index) => (
-            <motion.div
+            <div
               key={news.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col h-full"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={news.image}
                   alt={news.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center px-2 py-1 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-medium rounded-full">
+                  <span className="inline-flex items-center px-2 py-1 bg-white/90 text-gray-800 text-xs font-medium rounded">
                     {news.category}
                   </span>
                 </div>
@@ -225,41 +175,32 @@ const NewsSection = () => {
                   <Calendar className="w-3 h-3 mr-2" />
                   <span className="text-xs font-medium">{news.date}</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors flex-grow">
+                <h4 className="text-lg font-noto-serif font-bold text-gray-900 mb-3 leading-tight flex-grow">
                   {news.title}
                 </h4>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   onClick={() => handleOpenModal(news)}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group mt-auto"
+                  className="inline-flex items-center text-red-800 hover:text-red-900 font-gt-america font-medium text-sm mt-auto"
                 >
                   {t('common.readMore')}
-                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
+                  <ArrowRight className="ml-1 w-4 h-4" />
+                </button>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* View All News Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <motion.a
+        <div className="text-center">
+          <a
             href="/vijesti"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white font-semibold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group"
+            className="inline-flex items-center px-8 py-4 text-white font-gt-america font-medium text-lg rounded hover:opacity-90 transition-colors duration-200"
+            style={{ backgroundColor: '#912822' }}
           >
             {t('news.viewAll')}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.a>
-        </motion.div>
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </a>
+        </div>
       </div>
 
       {/* News Modal */}
@@ -274,7 +215,7 @@ const NewsSection = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm" />
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -288,17 +229,17 @@ const NewsSection = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
                   {selectedNews && (
                     <>
                       <div className="relative">
                         <img
                           src={selectedNews.image}
                           alt={selectedNews.title}
-                          className="w-full h-64 object-cover rounded-xl mb-6"
+                          className="w-full h-64 object-cover rounded mb-6"
                         />
                         <div className="absolute top-6 left-6">
-                          <span className="inline-flex items-center px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 text-sm font-medium rounded-full">
+                          <span className="inline-flex items-center px-3 py-1 bg-white/90 text-gray-800 text-sm font-medium rounded">
                             {selectedNews.category}
                           </span>
                         </div>
@@ -321,24 +262,23 @@ const NewsSection = () => {
 
                       <Dialog.Title
                         as="h3"
-                        className="text-2xl font-bold text-gray-900 mb-4"
+                        className="text-2xl font-noto-serif font-bold text-gray-900 mb-4"
                       >
                         {selectedNews.title}
                       </Dialog.Title>
 
-                      <div className="text-gray-600 leading-relaxed whitespace-pre-line">
+                      <div className="text-gray-600 leading-relaxed whitespace-pre-line font-gt-america">
                         {selectedNews.fullContent}
                       </div>
 
                       <div className="mt-6 flex justify-end">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        <button
+                          className="inline-flex justify-center rounded border border-transparent px-4 py-2 text-sm font-gt-america font-medium text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                          style={{ backgroundColor: '#912822' }}
                           onClick={handleCloseModal}
                         >
                           {t('common.close')}
-                        </motion.button>
+                        </button>
                       </div>
                     </>
                   )}

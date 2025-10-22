@@ -87,11 +87,12 @@ const KontaktPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <div className="min-h-screen bg-white">
             <Navbar />
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+            <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
                 <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 bg-[url('/images/fakultet3.jpg')] bg-cover bg-center opacity-10"></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -99,10 +100,10 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
                             {t('contact.title')}
                         </h1>
-                        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                        <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
                             {t('contact.subtitle')}
                         </p>
                     </motion.div>
@@ -124,47 +125,49 @@ const KontaktPage = () => {
                                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
                             >
                                 <div className="flex items-center mb-4">
-                                    <div className="p-3 bg-blue-100 rounded-lg">
-                                        <contact.icon className="w-6 h-6 text-blue-600" />
+                                    <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                                        <contact.icon className="w-6 h-6" style={{ color: '#912822' }} />
                                     </div>
-                                    <h3 className="ml-3 text-xl font-semibold text-gray-900">
+                                    <h3 className="ml-3 text-xl font-noto-serif font-semibold text-gray-900">
                                         {contact.title}
                                     </h3>
                                 </div>
 
                                 {contact.name && (
-                                    <p className="text-gray-700 font-medium mb-3">{contact.name}</p>
+                                    <p className="text-gray-700 font-medium mb-3 font-gt-america">{contact.name}</p>
                                 )}
 
                                 {contact.services && (
-                                    <p className="text-sm text-gray-600 mb-3">{contact.services}</p>
+                                    <p className="text-sm text-gray-600 mb-3 font-gt-america">{contact.services}</p>
                                 )}
 
                                 <div className="space-y-2">
                                     {contact.email && (
                                         <a
                                             href={`mailto:${contact.email}`}
-                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                                            className="flex items-center transition-colors duration-200 font-gt-america"
+                                            style={{ color: '#912822' }}
                                         >
                                             <Mail className="w-4 h-4 mr-2" />
-                                            <span className="text-sm">{contact.email}</span>
+                                            <span className="text-sm hover:opacity-80">{contact.email}</span>
                                         </a>
                                     )}
 
                                     {contact.email2 && (
                                         <a
                                             href={`mailto:${contact.email2}`}
-                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                                            className="flex items-center transition-colors duration-200 font-gt-america"
+                                            style={{ color: '#912822' }}
                                         >
                                             <Mail className="w-4 h-4 mr-2" />
-                                            <span className="text-sm">{contact.email2}</span>
+                                            <span className="text-sm hover:opacity-80">{contact.email2}</span>
                                         </a>
                                     )}
 
                                     {contact.phone && (
                                         <a
                                             href={`tel:${contact.phone}`}
-                                            className="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                                            className="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-200 font-gt-america"
                                         >
                                             <Phone className="w-4 h-4 mr-2" />
                                             <span className="text-sm">{contact.phone}</span>
@@ -172,7 +175,7 @@ const KontaktPage = () => {
                                     )}
 
                                     {contact.workingHours && (
-                                        <div className="flex items-center text-gray-700">
+                                        <div className="flex items-center text-gray-700 font-gt-america">
                                             <Clock className="w-4 h-4 mr-2" />
                                             <span className="text-sm">{contact.workingHours}</span>
                                         </div>
@@ -193,10 +196,10 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
                             {t('contact.location')}
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto font-gt-america">
                             {t('contact.locationSubtitle')}
                         </p>
                     </motion.div>
@@ -220,8 +223,8 @@ const KontaktPage = () => {
                         </div>
                         <div className="p-6">
                             <div className="flex items-center justify-center">
-                                <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                                <span className="text-gray-700 font-medium">
+                                <MapPin className="w-5 h-5 mr-2" style={{ color: '#912822' }} />
+                                <span className="text-gray-700 font-medium font-gt-america">
                                     {t('contact.locationText')}
                                 </span>
                             </div>
@@ -239,10 +242,10 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
                             {t('contact.faq')}
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-600 font-gt-america">
                             {t('contact.faqSubtitle')}
                         </p>
                     </motion.div>
@@ -260,7 +263,7 @@ const KontaktPage = () => {
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  <h3 className="text-lg font-noto-serif font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <ChevronDown 
@@ -279,7 +282,7 @@ const KontaktPage = () => {
                   className="overflow-hidden"
                 >
                   <div className="px-6 pb-4">
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed font-gt-america">
                       {faq.answer}
                     </p>
                   </div>

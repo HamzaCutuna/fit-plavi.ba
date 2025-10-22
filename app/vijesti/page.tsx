@@ -78,12 +78,15 @@ const VijestiPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0" style={{ backgroundColor: '#912822' }}></div>
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('/images/fakultet4.jpg')] bg-cover bg-center opacity-10"></div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,19 +94,11 @@ const VijestiPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6"
-            >
-              <Tag className="w-4 h-4 mr-2" />
-              {t('newsPage.badge')}
-            </motion.div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+
+            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
               {t('newsPage.title')}
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
               {t('newsPage.subtitle')}
             </p>
           </motion.div>
@@ -121,7 +116,7 @@ const VijestiPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer flex flex-col"
                 onClick={() => openModal(news)}
               >
                 <div className="relative h-48 overflow-hidden">
@@ -137,8 +132,8 @@ const VijestiPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center text-gray-500 mb-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center text-gray-500 mb-3 font-gt-america">
                     <Calendar className="w-3 h-3 mr-2" />
                     <span className="text-xs font-medium">{news.date}</span>
                     {news.author && (
@@ -149,16 +144,17 @@ const VijestiPage = () => {
                       </>
                     )}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg font-noto-serif font-bold text-gray-900 mb-3 leading-tight group-hover:opacity-80 transition-colors">
                     {news.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3 font-gt-america flex-grow">
                     {news.description}
                   </p>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group"
+                    className="inline-flex items-center font-medium text-sm group font-gt-america mt-auto"
+                    style={{ color: '#912822' }}
                   >
                     {t('common.readMore')}
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -229,12 +225,12 @@ const VijestiPage = () => {
 
                       <Dialog.Title
                         as="h3"
-                        className="text-2xl font-bold text-gray-900 mb-4"
+                        className="text-2xl font-noto-serif font-bold text-gray-900 mb-4"
                       >
                         {selectedNews.title}
                       </Dialog.Title>
 
-                      <div className="text-gray-600 leading-relaxed whitespace-pre-line">
+                      <div className="text-gray-600 leading-relaxed whitespace-pre-line font-gt-america">
                         {selectedNews.fullContent}
                       </div>
 
@@ -242,7 +238,11 @@ const VijestiPage = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                          className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 font-gt-america"
+                          style={{ 
+                            backgroundColor: '#912822',
+                            '--tw-ring-color': '#912822'
+                          } as React.CSSProperties}
                           onClick={() => setIsModalOpen(false)}
                         >
                           {t('common.close')}

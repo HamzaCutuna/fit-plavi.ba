@@ -181,13 +181,14 @@ export default function OsobljePage() {
     : staffMembers.filter(member => member.category === activeFilter);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <main className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800"></div>
+        <div className="absolute inset-0" style={{ backgroundColor: '#912822' }}></div>
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('/images/fakultet3.jpg')] bg-cover bg-center opacity-10"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -196,10 +197,10 @@ export default function OsobljePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-noto-serif font-bold text-white mb-6">
               {t('staffPage.title')}
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed font-gt-america">
               {t('staffPage.subtitle')}
             </p>
           </motion.div>
@@ -216,11 +217,14 @@ export default function OsobljePage() {
                 onClick={() => setActiveFilter(category.id)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 font-gt-america ${
                   activeFilter === category.id
-                    ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
+                    ? 'text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
+                style={{
+                  backgroundColor: activeFilter === category.id ? '#912822' : undefined
+                }}
               >
                 {category.name} ({category.count})
               </motion.button>
@@ -251,7 +255,7 @@ export default function OsobljePage() {
                   transition={{ duration: 0.6, delay: index * 0.05 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100"
                 >
-                  <div className="aspect-square bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-4">
+                  <div className="aspect-square flex items-center justify-center p-4" style={{ backgroundColor: '#912822' }}>
                     <img 
                       src={member.image} 
                       alt={member.name}
@@ -259,10 +263,10 @@ export default function OsobljePage() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-sm font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
-                    <p className="text-xs text-blue-600 font-medium mb-1">{member.position}</p>
+                    <h3 className="text-sm font-noto-serif font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
+                    <p className="text-xs font-medium mb-1" style={{ color: '#912822' }}>{member.position}</p>
                     <div className="flex items-center space-x-2 text-xs text-gray-600">
-                      <Mail className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                      <Mail className="w-3 h-3 flex-shrink-0" style={{ color: '#912822' }} />
                       <span className="truncate">{member.email}</span>
                     </div>
                   </div>
@@ -274,7 +278,7 @@ export default function OsobljePage() {
       </section>
 
       {/* Kontakt sekcija */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-800">
+      <section className="py-20" style={{ backgroundColor: '#912822' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -283,9 +287,9 @@ export default function OsobljePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">{t('staffPage.contact.title')}</h2>
+            <h2 className="text-4xl font-noto-serif font-bold text-white mb-6">{t('staffPage.contact.title')}</h2>
             <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8 font-gt-america">
               {t('staffPage.contact.subtitle')}
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -297,8 +301,8 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Mail className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{t('staffPage.contact.email')}</h3>
-                  <p className="text-blue-100 group-hover:text-white transition-colors duration-300">info@fit.ba</p>
+                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.email')}</h3>
+                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">esluzba@edu.fit.ba</p>
                 </a>
               </div>
               <div className="text-center">
@@ -309,8 +313,8 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Phone className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{t('staffPage.contact.phone')}</h3>
-                  <p className="text-blue-100 group-hover:text-white transition-colors duration-300">+387 36 281 160</p>
+                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.phone')}</h3>
+                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">+387 36 281 160</p>
                 </a>
               </div>
               <div className="text-center">
@@ -323,8 +327,8 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{t('staffPage.contact.address')}</h3>
-                  <p className="text-blue-100 group-hover:text-white transition-colors duration-300">Sjeverni logor br. 12, Mostar</p>
+                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.address')}</h3>
+                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">Sjeverni logor br. 12, Mostar</p>
                 </a>
               </div>
             </div>

@@ -78,12 +78,13 @@ const NaciniStudiranjaPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,10 +92,10 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
               {t('upis.naciniStudiranja.title')}
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
               {t('upis.naciniStudiranja.subtitle')}
             </p>
           </motion.div>
@@ -111,10 +112,10 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-6">
               {t('upis.naciniStudiranja.studyTypesTitle')}
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto font-gt-america">
               {t('upis.naciniStudiranja.studyTypesSubtitle')}
             </p>
           </motion.div>
@@ -135,17 +136,17 @@ const NaciniStudiranjaPage = () => {
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg">
-                    <type.icon className="w-6 h-6 text-blue-600" />
+                  <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                    <type.icon className="w-6 h-6" style={{ color: '#912822' }} />
                   </div>
-                  <h3 className="ml-3 text-xl font-semibold text-gray-900">
+                  <h3 className="ml-3 text-xl font-noto-serif font-semibold text-gray-900">
                     {type.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed font-gt-america">
                   {type.description}
                 </p>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-gray-500 leading-relaxed font-gt-america">
                   {type.details}
                 </p>
               </motion.div>
@@ -157,13 +158,14 @@ const NaciniStudiranjaPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-xl p-8 mb-16 text-white"
+            className="bg-gradient-to-r rounded-2xl shadow-xl p-8 mb-16 text-white"
+            style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-noto-serif font-bold mb-4">
                 DLWMS - Distance Learning Web Management System
               </h3>
-              <p className="text-lg text-blue-100">
+              <p className="text-lg text-red-100 font-gt-america">
                 {t('upis.naciniStudiranja.dlwmsSubtitle')}
               </p>
             </div>
@@ -178,12 +180,12 @@ const NaciniStudiranjaPage = () => {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
-                    <module.icon className="w-5 h-5 text-blue-200 mr-3" />
-                    <h4 className="font-semibold text-white">
+                    <module.icon className="w-5 h-5 mr-3" style={{ color: '#f5f5f5' }} />
+                    <h4 className="font-noto-serif font-semibold text-white">
                       {module.title}
                     </h4>
                   </div>
-                  <p className="text-blue-100 text-sm">
+                  <p className="text-red-100 text-sm font-gt-america">
                     {module.description}
                   </p>
                 </motion.div>
@@ -198,10 +200,10 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-16"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-6 text-center">
               {t('upis.naciniStudiranja.examObligations')}
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed text-center font-gt-america">
               {t('upis.naciniStudiranja.examObligationsDesc')}
             </p>
           </motion.div>
@@ -212,7 +214,7 @@ const NaciniStudiranjaPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-8 text-center">
               {t('upis.naciniStudiranja.learningResourcesTitle')}
             </h3>
             
@@ -226,19 +228,19 @@ const NaciniStudiranjaPage = () => {
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg">
-                      <resource.icon className="w-6 h-6 text-blue-600" />
+                    <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                      <resource.icon className="w-6 h-6" style={{ color: '#912822' }} />
                     </div>
                     <div className="ml-3">
-                      <h4 className="text-xl font-semibold text-gray-900">
+                      <h4 className="text-xl font-noto-serif font-semibold text-gray-900">
                         {resource.title}
                       </h4>
-                      <p className="text-sm text-blue-600 font-medium">
+                      <p className="text-sm font-medium font-gt-america" style={{ color: '#912822' }}>
                         {resource.subtitle}
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed font-gt-america">
                     {resource.description}
                   </p>
                 </motion.div>

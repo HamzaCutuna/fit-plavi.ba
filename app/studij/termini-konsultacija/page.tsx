@@ -142,12 +142,13 @@ const TerminiKonsultacijaPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('/images/fakultet3.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,10 +156,10 @@ const TerminiKonsultacijaPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
               {t('studij.termini-konsultacija.title')}
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
               {t('studij.termini-konsultacija.subtitle')}
             </p>
           </motion.div>
@@ -176,11 +177,11 @@ const TerminiKonsultacijaPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex flex-col"
               >
                 {/* Faculty Member Header */}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#91282220' }}>
                     {member.image ? (
                       <img 
                         src={member.image} 
@@ -188,21 +189,21 @@ const TerminiKonsultacijaPage = () => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <User className="w-6 h-6 text-blue-600" />
+                      <User className="w-6 h-6" style={{ color: '#912822' }} />
                     )}
                   </div>
                   <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 font-noto-serif">
                       {member.name}
                     </h3>
                   </div>
                 </div>
 
                 {/* Schedule */}
-                <div className="space-y-3">
+                <div className="space-y-3 flex-grow">
                   <div className="flex items-center mb-3">
-                    <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                    <span className="text-sm font-medium text-gray-700">
+                    <Clock className="w-4 h-4 mr-2" style={{ color: '#912822' }} />
+                    <span className="text-sm font-medium text-gray-700 font-gt-america">
                       {t('studij.termini-konsultacija.scheduleLabel')}
                     </span>
                   </div>
@@ -210,7 +211,7 @@ const TerminiKonsultacijaPage = () => {
                   {member.schedule.map((timeSlot, timeIndex) => (
                     <div
                       key={timeIndex}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium ${getDayColor(timeSlot)}`}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium font-gt-america ${getDayColor(timeSlot)}`}
                     >
                       {translateDay(timeSlot)}
                     </div>
@@ -218,10 +219,10 @@ const TerminiKonsultacijaPage = () => {
                 </div>
 
                 {/* Contact Info */}
-                <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="mt-auto pt-4 border-t border-gray-100">
                   <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{t('studij.termini-konsultacija.facultyLocation')}</span>
+                    <MapPin className="w-4 h-4 mr-2" style={{ color: '#912822' }} />
+                    <span className="font-gt-america">{t('studij.termini-konsultacija.facultyLocation')}</span>
                   </div>
                 </div>
               </motion.div>
@@ -233,14 +234,15 @@ const TerminiKonsultacijaPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-xl p-8 text-white"
+            className="mt-16 rounded-2xl shadow-xl p-8 text-white"
+            style={{ backgroundColor: '#912822' }}
           >
             <div className="text-center">
-              <Calendar className="w-12 h-12 mx-auto mb-4 text-blue-200" />
-              <h3 className="text-2xl font-bold mb-4">
+              <Calendar className="w-12 h-12 mx-auto mb-4 text-white/70" />
+              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
                 {t('studij.termini-konsultacija.importantNotes')}
               </h3>
-              <div className="max-w-3xl mx-auto space-y-4 text-blue-100">
+              <div className="max-w-3xl mx-auto space-y-4 text-white/90 font-gt-america">
                 <p className="leading-relaxed">
                   {t('studij.termini-konsultacija.note1')}
                 </p>

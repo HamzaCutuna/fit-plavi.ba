@@ -114,12 +114,13 @@ const RazvojSoftveraPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('/images/razvoj-software.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -127,10 +128,10 @@ const RazvojSoftveraPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
               {t('studij.razvoj-softvera.title')}
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
               {t('studij.razvoj-softvera.subtitle')}
             </p>
           </motion.div>
@@ -147,10 +148,10 @@ const RazvojSoftveraPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-noto-serif">
               {t('studij.razvoj-softvera.planTitle')}
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 font-gt-america">
               {t('studij.razvoj-softvera.planSubtitle')}
             </p>
             
@@ -161,7 +162,10 @@ const RazvojSoftveraPage = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors duration-200 shadow-lg"
+              style={{ backgroundColor: '#912822' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a1f1a'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#912822'}
             >
               <Download className="w-5 h-5 mr-2" />
               {t('studij.razvoj-softvera.downloadSyllabus')}
@@ -181,11 +185,14 @@ const RazvojSoftveraPage = () => {
                 {/* Year Header */}
                 <button
                   onClick={() => toggleYear(year.year)}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex items-center justify-between hover:from-blue-600 hover:to-indigo-700 transition-all duration-300"
+                  className="w-full px-6 py-4 text-white flex items-center justify-between transition-all duration-300"
+                  style={{ backgroundColor: '#912822' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a1f1a'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#912822'}
                 >
                   <div className="flex items-center">
                     <BookOpen className="w-6 h-6 mr-3" />
-                    <h3 className="text-xl font-bold">{year.title}</h3>
+                    <h3 className="text-xl font-bold font-noto-serif">{year.title}</h3>
                     <span className="ml-4 px-3 py-1 bg-white/20 rounded-full text-sm">
                       {calculateTotalECTS(year)} ECTS
                     </span>
@@ -214,8 +221,8 @@ const RazvojSoftveraPage = () => {
                           <div key={semester.semester} className="space-y-4">
                             {/* Semester Header */}
                             <div className="flex items-center">
-                              <Calendar className="w-5 h-5 text-blue-600 mr-2" />
-                              <h4 className="text-lg font-semibold text-gray-900">
+                              <Calendar className="w-5 h-5 mr-2" style={{ color: '#912822' }} />
+                              <h4 className="text-lg font-semibold text-gray-900 font-noto-serif">
                                 {semester.semester}. {t('studij.razvoj-softvera.semester')}
                               </h4>
                             </div>
@@ -240,28 +247,30 @@ const RazvojSoftveraPage = () => {
                                   {semester.subjects.map((subject, subjectIndex) => (
                                     <tr 
                                       key={subject.rb} 
-                                      className={`hover:bg-blue-50 transition-colors duration-200 ${
+                                      className={`transition-colors duration-200 ${
                                         subjectIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                                       }`}
+                                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#91282210'}
+                                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = subjectIndex % 2 === 0 ? 'white' : '#f9fafb'}
                                     >
-                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-gray-900">
+                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-gray-900 font-gt-america">
                                         {subject.rb}
                                       </td>
-                                      <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                                      <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 font-gt-america">
                                         {subject.name}
                                       </td>
-                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center text-blue-600">
+                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center font-gt-america" style={{ color: '#912822' }}>
                                         {subject.ects}
                                       </td>
                                     </tr>
                                   ))}
                                 </tbody>
-                                <tfoot className="bg-blue-50">
+                                <tfoot style={{ backgroundColor: '#91282210' }}>
                                   <tr>
-                                    <td colSpan={2} className="border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700">
+                                    <td colSpan={2} className="border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 font-gt-america">
                                       {t('studij.razvoj-softvera.totalEctsFor')} {semester.semester}. {t('studij.razvoj-softvera.semester')}:
                                     </td>
-                                    <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center text-blue-600">
+                                    <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center font-gt-america" style={{ color: '#912822' }}>
                                       {semester.subjects.reduce((total, subject) => total + subject.ects, 0)}
                                     </td>
                                   </tr>
@@ -283,17 +292,18 @@ const RazvojSoftveraPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-xl p-8 text-white"
+            className="mt-16 rounded-2xl shadow-xl p-8 text-white"
+            style={{ backgroundColor: '#912822' }}
           >
             <div className="text-center">
-              <Users className="w-12 h-12 mx-auto mb-4 text-blue-200" />
-              <h3 className="text-2xl font-bold mb-4">
+              <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />
+              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
                 {t('studij.razvoj-softvera.totalEcts')}
               </h3>
-              <p className="text-3xl font-bold text-blue-100">
+              <p className="text-3xl font-bold text-white/90 font-gt-america">
                 {studyPlan.reduce((total, year) => total + calculateTotalECTS(year), 0)} {t('studij.razvoj-softvera.ects')}
               </p>
-              <p className="text-blue-200 mt-2">
+              <p className="text-white/70 mt-2 font-gt-america">
                 {t('studij.razvoj-softvera.distributedSemesters')}
               </p>
             </div>

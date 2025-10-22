@@ -45,10 +45,76 @@
     "cta": "Learn more",
     "enrollNow": "Enroll now",
     "promoVideo": "Promo video",
+    "features": {
+      "education": "Quality Education",
+      "educationDesc": "Modern study programs adapted to the job market",
+      "technology": "Latest Technologies",
+      "technologyDesc": "Practical learning through projects and laboratories",
+      "career": "Fast Career",
+      "careerDesc": "High chances of employment after graduation"
+    },
     "stats": {
       "students": "Students",
       "experience": "Years of experience",
       "programs": "Study programs"
+    },
+    "academicExcellence": {
+      "title": "Academic Excellence and Tradition",
+      "description": "Faculty of Information Technology continues the tradition of quality education, combining academic rigor with a practical approach that prepares students for successful careers.",
+      "features": {
+        "education": {
+          "title": "Quality Education",
+          "description": "Rigorous academic programs that combine theoretical knowledge with practical skills."
+        },
+        "innovation": {
+          "title": "Innovative Approach",
+          "description": "Latest technologies and learning methodologies adapted to the modern job market."
+        },
+        "community": {
+          "title": "Academic Community",
+          "description": "Strong network of professors, students and graduates who shape the future of the IT industry."
+        }
+      }
+    }
+  },
+  "programs": {
+    "title": "Study Programs",
+    "subtitle": "Choose your path in the",
+    "subtitleHighlight": "IT world",
+    "description": "Modern study programs that prepare you for a successful career in information technology",
+    "learnMore": "Learn more",
+    "enrollNow": "Apply now",
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "Practically oriented program that prepares you for work in the IT industry",
+      "features": {
+        "web": "Web development",
+        "mobile": "Mobile applications",
+        "database": "Databases",
+        "projects": "Team projects"
+      }
+    },
+    "softwareEngineering": {
+      "title": "Software Engineering",
+      "description": "Deep knowledge of software engineering and system architecture with advanced algorithms and structures",
+      "features": {
+        "architecture": "System architecture",
+        "algorithms": "Artificial intelligence",
+        "testing": "Software testing",
+        "management": "Project management"
+      }
+    },
+    "oneYearMaster": {
+      "title": "One-year Master",
+      "description": "Specialization in the field of information technology"
+    },
+    "twoYearMaster": {
+      "title": "Two-year Master",
+      "description": "Deep research in the field of IT"
+    },
+    "master": {
+      "title": "Master Studies",
+      "description": "Continue your education with our master programs"
     }
   },
   "news": {

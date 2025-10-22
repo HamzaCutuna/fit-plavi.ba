@@ -45,10 +45,76 @@
     "cta": "Saznaj više",
     "enrollNow": "Upiši se sada",
     "promoVideo": "Promo video",
+    "features": {
+      "education": "Kvalitetno obrazovanje",
+      "educationDesc": "Moderni programi studija prilagođeni tržištu rada",
+      "technology": "Najnovije tehnologije",
+      "technologyDesc": "Praktično učenje kroz projekte i laboratorije",
+      "career": "Brza karijera",
+      "careerDesc": "Visoke šanse za zapošljavanje nakon diplome"
+    },
     "stats": {
       "students": "Studenata",
       "experience": "Godina iskustva",
       "programs": "Studijska programa"
+    },
+    "academicExcellence": {
+      "title": "Akademska izvrsnost i tradicija",
+      "description": "Fakultet informacijskih tehnologija nastavlja tradiciju kvalitetnog obrazovanja, kombinujući akademsku rigoroznost sa praktičnim pristupom koji priprema studente za uspješnu karijeru.",
+      "features": {
+        "education": {
+          "title": "Kvalitetno obrazovanje",
+          "description": "Rigorozni akademski programi koji kombinuju teorijsko znanje sa praktičnim vještinama."
+        },
+        "innovation": {
+          "title": "Inovativni pristup",
+          "description": "Najnovije tehnologije i metodologije učenja prilagođene savremenom tržištu rada."
+        },
+        "community": {
+          "title": "Akademska zajednica",
+          "description": "Snažna mreža profesora, studenata i diplomaca koji oblikuju budućnost IT industrije."
+        }
+      }
+    }
+  },
+  "programs": {
+    "title": "Studijski programi",
+    "subtitle": "Izaberite svoj put u",
+    "subtitleHighlight": "IT svijet",
+    "description": "Moderni programi studija koji te pripremaju za uspješnu karijeru u informacijskim tehnologijama",
+    "learnMore": "Saznaj više",
+    "enrollNow": "Prijavite se sada",
+    "softwareDevelopment": {
+      "title": "Razvoj softvera",
+      "description": "Praktično orijentisan program koji te priprema za rad u IT industriji",
+      "features": {
+        "web": "Web razvoj",
+        "mobile": "Mobilne aplikacije",
+        "database": "Baze podataka",
+        "projects": "Timski projekti"
+      }
+    },
+    "softwareEngineering": {
+      "title": "Softverski inženjering",
+      "description": "Duboko znanje softverskog inženjerstva i arhitekture sistema uz napredne algoritme i strukture",
+      "features": {
+        "architecture": "Arhitektura sistema",
+        "algorithms": "Umjetna inteligencija",
+        "testing": "Testiranje softvera",
+        "management": "Upravljanje projektima"
+      }
+    },
+    "oneYearMaster": {
+      "title": "Jednogodišnji master",
+      "description": "Specijalizacija u oblasti informacijskih tehnologija"
+    },
+    "twoYearMaster": {
+      "title": "Dvogodišnji master",
+      "description": "Duboko istraživanje u oblasti IT"
+    },
+    "master": {
+      "title": "Master studiji",
+      "description": "Nastavite svoje obrazovanje sa našim master programima"
     }
   },
   "news": {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import ProgramsShowcase from '../components/ProgramsShowcase';
 import NewsSection from '../components/NewsSection';
 import Footer from '../components/Footer';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
@@ -32,6 +33,7 @@ export default function Home() {
       <LocalBusinessSchema />
       <Navbar />
       <Hero />
+      <ProgramsShowcase />
       <NewsSection />
       <Footer />
     </main>

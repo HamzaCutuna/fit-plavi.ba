@@ -1,5 +1,46 @@
 @import "tailwindcss";
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'CanelaDeck';
+  src: url('/fonts/CanelaDeck-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CanelaDeck';
+  src: url('/fonts/CanelaDeck-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CanelaDeck';
+  src: url('/fonts/CanelaDeck-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CanelaDeck';
+  src: url('/fonts/CanelaDeck-Black-Trial.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('/fonts/GT_America_Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,7 +63,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'GT America', var(--font-manrope), var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Smooth scrolling */
@@ -40,12 +81,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #1d4ed8, #1e3a8a);
+  background: linear-gradient(to bottom, #912822, #7a1f1a, #6b1a16);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #1e40af, #1e3a8a);
+  background: linear-gradient(to bottom, #a52d28, #8b221e, #7a1f1a);
 }
 
 /* Custom animations */
@@ -58,6 +99,18 @@ html {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
@@ -116,6 +169,11 @@ html {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
 }
 
 .animate-float {
@@ -189,4 +247,13 @@ html {
   100% {
     background-position: 200% 0;
   }
+}
+
+/* Custom Font Classes */
+.font-noto-serif {
+  font-family: 'Noto Serif', serif;
+}
+
+.font-gt-america {
+  font-family: 'GT America', sans-serif;
 }
