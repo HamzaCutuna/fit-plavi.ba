@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Mail, Phone, Building2 } from 'lucide-react';
+import Image from 'next/image';
 import { useTranslation } from '../../contexts/LanguageContext';
 
 export default function OsobljePage() {
@@ -197,7 +198,7 @@ export default function OsobljePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('staffPage.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed font-gt-america">
@@ -256,14 +257,16 @@ export default function OsobljePage() {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100"
                 >
                   <div className="aspect-square flex items-center justify-center p-4" style={{ backgroundColor: '#912822' }}>
-                    <img 
+                    <Image 
                       src={member.image} 
                       alt={member.name}
+                      width={128}
+                      height={128}
                       className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-sm font-noto-serif font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
+                    <h3 className="text-sm font-playfair-display font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
                     <p className="text-xs font-medium mb-1" style={{ color: '#912822' }}>{member.position}</p>
                     <div className="flex items-center space-x-2 text-xs text-gray-600">
                       <Mail className="w-3 h-3 flex-shrink-0" style={{ color: '#912822' }} />
@@ -287,7 +290,7 @@ export default function OsobljePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl font-noto-serif font-bold text-white mb-6">{t('staffPage.contact.title')}</h2>
+            <h2 className="text-4xl font-playfair-display font-bold text-white mb-6">{t('staffPage.contact.title')}</h2>
             <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8 font-gt-america">
               {t('staffPage.contact.subtitle')}
@@ -301,7 +304,7 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Mail className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.email')}</h3>
+                  <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.email')}</h3>
                   <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">esluzba@edu.fit.ba</p>
                 </a>
               </div>
@@ -313,7 +316,7 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Phone className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.phone')}</h3>
+                  <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.phone')}</h3>
                   <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">+387 36 281 160</p>
                 </a>
               </div>
@@ -327,7 +330,7 @@ export default function OsobljePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300">
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-noto-serif font-bold text-white mb-2">{t('staffPage.contact.address')}</h3>
+                  <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.address')}</h3>
                   <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">Sjeverni logor br. 12, Mostar</p>
                 </a>
               </div>

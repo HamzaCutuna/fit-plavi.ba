@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Award, Globe, Building2, Laptop, Monitor } from 'lucide-react';
@@ -26,7 +27,7 @@ export default function FakultetPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('facultyPage.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed font-gt-america">
@@ -54,7 +55,7 @@ export default function FakultetPage() {
                     <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#912822' }}>
                       <Building2 className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-noto-serif font-bold text-gray-900">{t('facultyPage.basicInfo.title')}</h3>
+                    <h3 className="text-2xl font-playfair-display font-bold text-gray-900">{t('facultyPage.basicInfo.title')}</h3>
                   </div>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6 font-gt-america">
                     {t('facultyPage.basicInfo.content1')}
@@ -74,10 +75,11 @@ export default function FakultetPage() {
                   </ul>
                 </div>
                 <div className="relative h-64 lg:h-auto">
-                  <img 
+                  <Image 
                     src="/images/fakultet1.jpg" 
                     alt="University building"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -98,7 +100,7 @@ export default function FakultetPage() {
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
                       <Laptop className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-noto-serif font-bold">{t('facultyPage.distanceLearning.title')}</h3>
+                    <h3 className="text-2xl font-playfair-display font-bold">{t('facultyPage.distanceLearning.title')}</h3>
                   </div>
                   <p className="text-lg leading-relaxed mb-6 font-gt-america">
                     {t('facultyPage.distanceLearning.content1')}
@@ -108,10 +110,11 @@ export default function FakultetPage() {
                   </p>
                 </div>
                 <div className="relative h-64 lg:h-auto">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                     alt="Distance learning"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -127,10 +130,11 @@ export default function FakultetPage() {
             >
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-64 lg:h-auto order-2 lg:order-1">
-                  <img 
+                  <Image 
                     src="/images/fakultet3.jpg" 
                     alt="Team collaboration"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-8 md:p-12 order-1 lg:order-2">
@@ -138,7 +142,7 @@ export default function FakultetPage() {
                     <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#912822' }}>
                       <Award className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-noto-serif font-bold text-gray-900">{t('facultyPage.quality.title')}</h3>
+                    <h3 className="text-2xl font-playfair-display font-bold text-gray-900">{t('facultyPage.quality.title')}</h3>
                   </div>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6 font-gt-america">
                     {t('facultyPage.quality.content1')}
@@ -164,7 +168,7 @@ export default function FakultetPage() {
                     <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#912822' }}>
                       <Globe className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-noto-serif font-bold text-gray-900">{t('facultyPage.collaboration.title')}</h3>
+                    <h3 className="text-2xl font-playfair-display font-bold text-gray-900">{t('facultyPage.collaboration.title')}</h3>
                   </div>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6 font-gt-america">
                     {t('facultyPage.collaboration.content1')}
@@ -177,10 +181,11 @@ export default function FakultetPage() {
                   </p>
                 </div>
                 <div className="relative h-64 lg:h-auto">
-                  <img 
+                  <Image 
                     src="/images/fit4.jpg" 
                     alt="International collaboration"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -197,10 +202,11 @@ export default function FakultetPage() {
             >
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-64 lg:h-auto order-2 lg:order-1">
-                  <img 
+                  <Image 
                     src="/images/fakultet4.jpg" 
                     alt="Continuous improvement"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-8 md:p-12 text-white order-1 lg:order-2">
@@ -208,7 +214,7 @@ export default function FakultetPage() {
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
                       <Monitor className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-noto-serif font-bold">{t('facultyPage.improvement.title')}</h3>
+                    <h3 className="text-2xl font-playfair-display font-bold">{t('facultyPage.improvement.title')}</h3>
                   </div>
                   <p className="text-lg leading-relaxed font-gt-america">
                     {t('facultyPage.improvement.content')}
@@ -230,7 +236,7 @@ export default function FakultetPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-noto-serif font-bold text-gray-900 mb-6">{t('facultyPage.firstDean.title')}</h2>
+            <h2 className="text-4xl font-playfair-display font-bold text-gray-900 mb-6">{t('facultyPage.firstDean.title')}</h2>
             <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#912822' }}></div>
           </motion.div>
 
@@ -248,7 +254,7 @@ export default function FakultetPage() {
               
               <div className="relative z-10">
                 <div className="mb-8">
-                  <h3 className="text-2xl font-noto-serif font-bold text-gray-900">{t('facultyPage.firstDean.name')}</h3>
+                  <h3 className="text-2xl font-playfair-display font-bold text-gray-900">{t('facultyPage.firstDean.name')}</h3>
                   <p className="font-medium font-gt-america" style={{ color: '#912822' }}>{t('facultyPage.firstDean.position')}</p>
                 </div>
                 

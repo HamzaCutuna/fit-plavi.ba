@@ -2,10 +2,22 @@
 
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
+import { useState, useEffect } from 'react';
 
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setShowScrollButton(scrollTop > 300); // Show button only after scrolling 300px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -18,7 +30,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Faculty Info */}
           <div className="lg:col-span-1 text-center lg:text-left">
-            <h3 className="text-2xl font-noto-serif font-bold mb-6 text-white">
+            <h3 className="text-2xl font-playfair-display font-bold mb-6 text-white">
               FIT Mostar
             </h3>
             <p className="text-gray-300 mb-8 leading-relaxed font-gt-america">
@@ -45,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-noto-serif font-semibold mb-6 text-white">{t('footer.quickLinks')}</h4>
+            <h4 className="text-lg font-playfair-display font-semibold mb-6 text-white">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               {[
                 { name: t('footer.aboutFaculty'), href: '/fakultet' },
@@ -67,7 +79,7 @@ const Footer = () => {
 
           {/* Service Info */}
           <div>
-            <h4 className="text-lg font-noto-serif font-semibold mb-6 text-white">{t('footer.serviceInfo')}</h4>
+            <h4 className="text-lg font-playfair-display font-semibold mb-6 text-white">{t('footer.serviceInfo')}</h4>
             <ul className="space-y-2">
               {[
                 t('footer.bankAccount'),
@@ -85,7 +97,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-noto-serif font-semibold mb-6 text-white">{t('footer.contact')}</h4>
+            <h4 className="text-lg font-playfair-display font-semibold mb-6 text-white">{t('footer.contact')}</h4>
             <div className="space-y-4">
               {[
                 {
@@ -169,14 +181,16 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center z-40"
-        style={{ backgroundColor: '#912822' }}
-        aria-label="Back to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
+      {showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-12 h-12 text-white rounded-full shadow-lg hover:shadow-xl hover:cursor-pointer transition-all duration-200 flex items-center justify-center z-40 group"
+          style={{ backgroundColor: '#912822' }}
+          aria-label="Back to top"
+        >
+          <ArrowUp className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-1" />
+        </button>
+      )}
     </footer>
   );
 };

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Transition } from '@headlessui/react';
 import Link from 'next/link';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from '../contexts/LanguageContext';
 
@@ -68,12 +69,12 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-      isScrolled 
+      isScrolled || isMenuOpen
         ? 'shadow-lg' 
         : ''
     }`}
     style={{
-      backgroundColor: isScrolled ? '#912822' : 'transparent'
+      backgroundColor: isScrolled || isMenuOpen ? '#912822' : 'transparent'
     }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -89,24 +90,27 @@ const Navbar = () => {
               className="flex items-center space-x-3"
             >
               <div className="relative group">
-                <img 
+                <Image 
                   src="/images/logo-veci.png" 
                   alt="FIT Mostar Logo" 
+                  width={48}
+                  height={48}
                   className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:opacity-0"
                 />
-                <img 
+                <Image 
                   src="/images/logo-veci-hover.png" 
                   alt="FIT Mostar Logo Hover" 
+                  width={48}
+                  height={48}
                   className="h-10 md:h-12 w-auto transition-all duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-0"
                 />
               </div>
-              <span className={`text-sm md:text-base lg:text-lg font-noto-serif font-bold transition-colors duration-300 ease-in-out ${
+              <span className={`text-xs sm:text-sm md:text-base lg:text-lg font-playfair-display font-bold transition-colors duration-300 ease-in-out ${
                 isScrolled 
                   ? 'text-white hover:text-red-100' 
                   : 'text-white hover:text-red-100'
               }`}>
-                <span className="hidden sm:inline">{t('navbar.logo')}</span>
-                <span className="sm:hidden">{t('navbar.logoShort')}</span>
+                {t('navbar.logo')}
               </span>
             </Link>
           </motion.div>

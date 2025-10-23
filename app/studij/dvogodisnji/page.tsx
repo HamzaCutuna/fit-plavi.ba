@@ -93,7 +93,7 @@ const DvogodisnjiPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-playfair-display">
               {t('studij.dvogodisnji.title')}
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
@@ -113,7 +113,7 @@ const DvogodisnjiPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-noto-serif">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-playfair-display">
               {t('studij.dvogodisnji.planTitle')}
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 font-gt-america">
@@ -157,7 +157,7 @@ const DvogodisnjiPage = () => {
                 >
                   <div className="flex items-center">
                     <BookOpen className="w-6 h-6 mr-3" />
-                    <h3 className="text-xl font-bold font-noto-serif">{year.title}</h3>
+                    <h3 className="text-xl font-bold font-playfair-display">{year.title}</h3>
                     <span className="ml-4 px-3 py-1 bg-white/20 rounded-full text-sm">
                       {calculateTotalECTS(year)} ECTS
                     </span>
@@ -187,7 +187,7 @@ const DvogodisnjiPage = () => {
                             {/* Semester Header */}
                             <div className="flex items-center">
                               <Calendar className="w-5 h-5 mr-2" style={{ color: '#912822' }} />
-                              <h4 className="text-lg font-semibold text-gray-900 font-noto-serif">
+                              <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                                 {semester.semester}. {t('studij.dvogodisnji.semester')}
                               </h4>
                             </div>
@@ -268,7 +268,7 @@ const DvogodisnjiPage = () => {
           >
             <div className="text-center">
               <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />
-              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
+              <h3 className="text-2xl font-bold mb-4 font-playfair-display">
                 {t('studij.dvogodisnji.masterProgram')}
               </h3>
               <div className="max-w-3xl mx-auto space-y-4">
@@ -299,7 +299,7 @@ const DvogodisnjiPage = () => {
             transition={{ duration: 0.8, delay: 1.4 }}
             className="mt-8 bg-white rounded-xl shadow-lg p-6"
           >
-            <h4 className="text-lg font-semibold text-gray-900 mb-4 font-noto-serif">
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 font-playfair-display">
               {t('studij.dvogodisnji.electiveCoursesNotes')}
             </h4>
             <div className="grid md:grid-cols-2 gap-6">

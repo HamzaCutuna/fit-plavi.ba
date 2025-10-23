@@ -1,8 +1,9 @@
 'use client';
 
-import { Calendar, ArrowRight, Clock, User, Tag } from 'lucide-react';
+import { Calendar, ArrowRight, User, Tag } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import Image from 'next/image';
 import { useTranslation } from '../contexts/LanguageContext';
 
 interface NewsItem {
@@ -11,7 +12,6 @@ interface NewsItem {
   date: string;
   author: string;
   category: string;
-  readTime: string;
   description: string;
   fullContent: string;
   image: string;
@@ -28,7 +28,6 @@ const NewsSection = () => {
     date: "18. juli 2025.",
     author: "FIT Mostar",
     category: t('news.categories.announcements'),
-    readTime: "1 min",
     description: t('news.items.vacationExcerpt'),
     fullContent: t('news.items.vacationExcerpt') + " Obavještavamo studente da Fakultet neće raditi do 18.8.2025. godine. PRIJATAN ODMOR SVIMA!",
     image: "/images/fit1.png"
@@ -41,7 +40,6 @@ const NewsSection = () => {
       date: "11. juli 2025.",
       author: "FIT Mostar",
       category: t('news.categories.announcements'),
-      readTime: "2 min",
       description: t('news.items.enrollmentExcerpt'),
       fullContent: t('news.items.enrollmentExcerpt') + "\n\nKandidati su dužni da se jave u sekretarijat fakulteta u terminu od 15. do 25. jula 2025. godine sa potrebnom dokumentacijom.",
       image: "/images/fit2.jpg"
@@ -52,7 +50,6 @@ const NewsSection = () => {
       date: "10. juli 2025.",
       author: "FIT Mostar",
       category: t('news.categories.enrollment'),
-      readTime: "1 min",
       description: t('news.items.rankListExcerpt'),
       fullContent: t('news.items.rankListExcerpt') + "\n\nLista je dostupna na zvaničnoj web stranici fakulteta i na oglasnoj tabli.\n\nKandidati koji se nalaze na listi mogu pristupiti upisu u određenom terminu. Za sve dodatne informacije obratite se sekretarijatu fakulteta.",
       image: "/images/fit4.jpg"
@@ -63,7 +60,6 @@ const NewsSection = () => {
       date: "13. januar 2025.",
       author: "FIT Mostar",
       category: t('news.categories.competition'),
-      readTime: "3 min",
       description: t('news.items.assistantExcerpt'),
       fullContent: t('news.items.assistantExcerpt') + "\n\nUslovi konkursa:\n- Završen II ciklus studija (master/magistar) iz relevantne oblasti\n- Prosjek ocjena min. 8,00\n- Poznavanje engleskog jezika\n\nPrijave se podnose do 15. februara 2025. godine u sekretarijatu fakulteta.",
       image: "/images/fit3.jpg"
@@ -85,7 +81,7 @@ const NewsSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-4">
             {t('news.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-gt-america">
@@ -98,10 +94,11 @@ const NewsSection = () => {
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Image */}
             <div className="relative h-64 lg:h-full overflow-hidden">
-              <img
+              <Image
                 src={featuredNews.image}
                 alt={featuredNews.title}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               
@@ -121,17 +118,14 @@ const NewsSection = () => {
                   <Calendar className="w-4 h-4 mr-2" />
                   <span className="text-sm font-medium">{featuredNews.date}</span>
                 </div>
+                <span className="text-gray-400">•</span>
                 <div className="flex items-center">
                   <User className="w-4 h-4 mr-2" />
                   <span className="text-sm font-medium">{featuredNews.author}</span>
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-medium">{featuredNews.readTime}</span>
-                </div>
               </div>
 
-              <h3 className="text-2xl lg:text-3xl font-noto-serif font-bold text-gray-900 mb-6 leading-tight">
+              <h3 className="text-2xl lg:text-3xl font-playfair-display font-bold text-gray-900 mb-6 leading-tight">
                 {featuredNews.title}
               </h3>
 
@@ -141,7 +135,7 @@ const NewsSection = () => {
 
               <button
                 onClick={() => handleOpenModal(featuredNews)}
-                className="inline-flex items-center text-red-800 hover:text-red-900 font-gt-america font-medium text-lg"
+                className="inline-flex items-center text-red-800 hover:text-red-900 hover:cursor-pointer font-gt-america font-medium text-lg"
               >
                 {t('common.readMore')}
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -158,10 +152,11 @@ const NewsSection = () => {
               className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={news.image}
                   alt={news.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute top-4 left-4">
@@ -171,16 +166,23 @@ const NewsSection = () => {
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center text-gray-500 mb-3">
-                  <Calendar className="w-3 h-3 mr-2" />
-                  <span className="text-xs font-medium">{news.date}</span>
+                <div className="flex items-center text-gray-500 mb-3 space-x-3">
+                  <div className="flex items-center">
+                    <Calendar className="w-3 h-3 mr-1" />
+                    <span className="text-xs font-medium">{news.date}</span>
+                  </div>
+                  <span className="text-gray-400">•</span>
+                  <div className="flex items-center">
+                    <User className="w-3 h-3 mr-1" />
+                    <span className="text-xs font-medium">{news.author}</span>
+                  </div>
                 </div>
-                <h4 className="text-lg font-noto-serif font-bold text-gray-900 mb-3 leading-tight flex-grow">
+                <h4 className="text-lg font-playfair-display font-bold text-gray-900 mb-3 leading-tight flex-grow">
                   {news.title}
                 </h4>
                 <button
                   onClick={() => handleOpenModal(news)}
-                  className="inline-flex items-center text-red-800 hover:text-red-900 font-gt-america font-medium text-sm mt-auto"
+                  className="inline-flex items-center text-red-800 hover:text-red-900 hover:cursor-pointer font-gt-america font-medium text-sm mt-auto"
                 >
                   {t('common.readMore')}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -233,9 +235,11 @@ const NewsSection = () => {
                   {selectedNews && (
                     <>
                       <div className="relative">
-                        <img
+                        <Image
                           src={selectedNews.image}
                           alt={selectedNews.title}
+                          width={800}
+                          height={256}
                           className="w-full h-64 object-cover rounded mb-6"
                         />
                         <div className="absolute top-6 left-6">
@@ -250,19 +254,16 @@ const NewsSection = () => {
                           <Calendar className="w-4 h-4 mr-2" />
                           <span className="text-sm font-medium">{selectedNews.date}</span>
                         </div>
+                        <span className="text-gray-400">•</span>
                         <div className="flex items-center">
                           <User className="w-4 h-4 mr-2" />
                           <span className="text-sm font-medium">{selectedNews.author || 'FIT Mostar'}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">{selectedNews.readTime || '2 min'}</span>
                         </div>
                       </div>
 
                       <Dialog.Title
                         as="h3"
-                        className="text-2xl font-noto-serif font-bold text-gray-900 mb-4"
+                        className="text-2xl font-playfair-display font-bold text-gray-900 mb-4"
                       >
                         {selectedNews.title}
                       </Dialog.Title>

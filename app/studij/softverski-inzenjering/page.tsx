@@ -154,7 +154,7 @@ const SoftverskiInzenjeringPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-playfair-display">
               {t('studij.softverski-inzenjering.title')}
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
@@ -174,7 +174,7 @@ const SoftverskiInzenjeringPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-noto-serif">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-playfair-display">
               {t('studij.softverski-inzenjering.planTitle')}
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 font-gt-america">
@@ -218,7 +218,7 @@ const SoftverskiInzenjeringPage = () => {
                 >
                   <div className="flex items-center">
                     <BookOpen className="w-6 h-6 mr-3" />
-                    <h3 className="text-xl font-bold font-noto-serif">{year.title}</h3>
+                    <h3 className="text-xl font-bold font-playfair-display">{year.title}</h3>
                     <span className="ml-4 px-3 py-1 bg-white/20 rounded-full text-sm">
                       {calculateTotalECTS(year)} ECTS
                     </span>
@@ -248,7 +248,7 @@ const SoftverskiInzenjeringPage = () => {
                             {/* Semester Header */}
                             <div className="flex items-center">
                               <Calendar className="w-5 h-5 mr-2" style={{ color: '#912822' }} />
-                              <h4 className="text-lg font-semibold text-gray-900 font-noto-serif">
+                              <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                                 {semester.semester}. {t('studij.softverski-inzenjering.semester')}
                               </h4>
                             </div>
@@ -323,7 +323,7 @@ const SoftverskiInzenjeringPage = () => {
           >
             <div className="text-center">
               <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />
-              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
+              <h3 className="text-2xl font-bold mb-4 font-playfair-display">
                 {t('studij.softverski-inzenjering.totalEcts')}
               </h3>
               <p className="text-3xl font-bold text-white/90 font-gt-america">

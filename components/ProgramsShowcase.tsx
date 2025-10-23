@@ -66,7 +66,7 @@ const ProgramsShowcase = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-4">
             {t('programs.title') || 'Studijski programi'}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-gt-america">
@@ -99,7 +99,7 @@ const ProgramsShowcase = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-4">
                   {program.title}
                 </h3>
                 
@@ -137,7 +137,7 @@ const ProgramsShowcase = () => {
         {/* Master Programs */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-4">
               {t('programs.master.title') || 'Master studiji'}
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto font-gt-america">
@@ -152,10 +152,10 @@ const ProgramsShowcase = () => {
                 className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xl font-noto-serif font-semibold text-gray-900">
+                  <h4 className="text-xl font-playfair-display font-semibold text-gray-900">
                     {program.title}
                   </h4>
-                  <div className="inline-flex items-center px-3 py-1 bg-white text-gray-700 text-sm font-medium rounded">
+                  <div className="inline-flex items-center px-3 py-1 bg-white text-gray-700 text-sm font-medium rounded whitespace-nowrap">
                     <Clock className="w-3 h-3 mr-1" />
                     {program.duration}
                   </div>

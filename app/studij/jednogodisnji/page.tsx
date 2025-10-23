@@ -55,7 +55,7 @@ const JednogodisnjiPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-playfair-display">
               {t('studij.jednogodisnji.title')}
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
@@ -75,7 +75,7 @@ const JednogodisnjiPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-noto-serif">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-playfair-display">
               {t('studij.jednogodisnji.planTitle')}
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 font-gt-america">
@@ -110,7 +110,7 @@ const JednogodisnjiPage = () => {
             <div className="px-6 py-4" style={{ backgroundColor: '#912822' }}>
               <div className="flex items-center">
                 <BookOpen className="w-6 h-6 text-white mr-3" />
-                <h3 className="text-xl font-bold text-white font-noto-serif">
+                <h3 className="text-xl font-bold text-white font-playfair-display">
                   {t('studij.jednogodisnji.masterProgram')}
                 </h3>
                 <span className="ml-4 px-3 py-1 bg-white/20 rounded-full text-sm text-white">
@@ -192,7 +192,7 @@ const JednogodisnjiPage = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col">
               <div className="flex items-center mb-4">
                 <Calendar className="w-6 h-6 mr-3" style={{ color: '#912822' }} />
-                <h4 className="text-lg font-semibold text-gray-900 font-noto-serif">
+                <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                   1. {t('studij.jednogodisnji.semester')}
                 </h4>
               </div>
@@ -226,7 +226,7 @@ const JednogodisnjiPage = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col">
               <div className="flex items-center mb-4">
                 <GraduationCap className="w-6 h-6 mr-3" style={{ color: '#912822' }} />
-                <h4 className="text-lg font-semibold text-gray-900 font-noto-serif">
+                <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                   2. {t('studij.jednogodisnji.semester')}
                 </h4>
               </div>
@@ -255,7 +255,7 @@ const JednogodisnjiPage = () => {
           >
             <div className="text-center">
               <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />
-              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
+              <h3 className="text-2xl font-bold mb-4 font-playfair-display">
                 {t('studij.jednogodisnji.masterProgram')}
               </h3>
               <div className="max-w-3xl mx-auto space-y-4">

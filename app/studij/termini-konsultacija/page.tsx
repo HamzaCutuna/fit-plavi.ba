@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Clock, User, Calendar, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useTranslation } from '../../../contexts/LanguageContext';
@@ -156,7 +157,7 @@ const TerminiKonsultacijaPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-noto-serif">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-playfair-display">
               {t('studij.termini-konsultacija.title')}
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto font-gt-america">
@@ -183,9 +184,11 @@ const TerminiKonsultacijaPage = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#91282220' }}>
                     {member.image ? (
-                      <img 
+                      <Image 
                         src={member.image} 
                         alt={member.name}
+                        width={48}
+                        height={48}
                         className="w-full h-full object-cover"
                       />
                     ) : (
@@ -193,7 +196,7 @@ const TerminiKonsultacijaPage = () => {
                     )}
                   </div>
                   <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900 font-noto-serif">
+                    <h3 className="text-lg font-semibold text-gray-900 font-playfair-display">
                       {member.name}
                     </h3>
                   </div>
@@ -239,7 +242,7 @@ const TerminiKonsultacijaPage = () => {
           >
             <div className="text-center">
               <Calendar className="w-12 h-12 mx-auto mb-4 text-white/70" />
-              <h3 className="text-2xl font-bold mb-4 font-noto-serif">
+              <h3 className="text-2xl font-bold mb-4 font-playfair-display">
                 {t('studij.termini-konsultacija.importantNotes')}
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-white/90 font-gt-america">

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, User, Tag } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useTranslation } from '../../contexts/LanguageContext';
@@ -95,7 +96,7 @@ const VijestiPage = () => {
             className="text-center"
           >
 
-            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('newsPage.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
@@ -120,10 +121,11 @@ const VijestiPage = () => {
                 onClick={() => openModal(news)}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={news.image}
                     alt={news.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute top-4 left-4">
@@ -144,21 +146,13 @@ const VijestiPage = () => {
                       </>
                     )}
                   </div>
-                  <h3 className="text-lg font-noto-serif font-bold text-gray-900 mb-3 leading-tight group-hover:opacity-80 transition-colors">
+                  <h3 className="text-lg font-playfair-display font-bold text-gray-900 mb-3 leading-tight group-hover:opacity-80 transition-colors">
                     {news.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3 font-gt-america flex-grow">
                     {news.description}
                   </p>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center font-medium text-sm group font-gt-america mt-auto"
-                    style={{ color: '#912822' }}
-                  >
-                    {t('common.readMore')}
-                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </motion.div>
+                  
                 </div>
               </motion.div>
             ))}
@@ -198,9 +192,11 @@ const VijestiPage = () => {
                   {selectedNews && (
                     <>
                       <div className="relative">
-                        <img
+                        <Image
                           src={selectedNews.image}
                           alt={selectedNews.title}
+                          width={800}
+                          height={256}
                           className="w-full h-64 object-cover rounded-xl mb-6"
                         />
                         <div className="absolute top-6 left-6">
@@ -225,7 +221,7 @@ const VijestiPage = () => {
 
                       <Dialog.Title
                         as="h3"
-                        className="text-2xl font-noto-serif font-bold text-gray-900 mb-4"
+                        className="text-2xl font-playfair-display font-bold text-gray-900 mb-4"
                       >
                         {selectedNews.title}
                       </Dialog.Title>

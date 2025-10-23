@@ -51,7 +51,7 @@ const StaUpisatiPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.staUpisati.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
@@ -71,7 +71,7 @@ const StaUpisatiPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-8 text-center">
               {t('upis.staUpisati.whyTitle')}
             </h2>
             
@@ -105,7 +105,7 @@ const StaUpisatiPage = () => {
                   <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
                     <feature.icon className="w-6 h-6" style={{ color: '#912822' }} />
                   </div>
-                  <h3 className="ml-3 text-xl font-noto-serif font-semibold text-gray-900">
+                  <h3 className="ml-3 text-xl font-playfair-display font-semibold text-gray-900">
                     {feature.title}
                   </h3>
                 </div>
@@ -123,7 +123,7 @@ const StaUpisatiPage = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-16"
           >
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-6">
               {t('upis.staUpisati.continuousImprovement')}
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6 font-gt-america">
@@ -145,7 +145,7 @@ const StaUpisatiPage = () => {
             style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
           >
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-noto-serif font-bold mb-4">
+              <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 {t('upis.staUpisati.informatorTitle')}
               </h3>
               <p className="text-lg text-red-100 leading-relaxed font-gt-america">

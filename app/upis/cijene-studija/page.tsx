@@ -79,7 +79,7 @@ const CijeneStudijaPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.cijeneStudija.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
@@ -99,7 +99,7 @@ const CijeneStudijaPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-6">
               {t('upis.cijeneStudija.infoTitle')}
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto font-gt-america">
@@ -133,7 +133,7 @@ const CijeneStudijaPage = () => {
                     )}
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-2xl font-noto-serif font-bold text-gray-900">
+                    <h3 className="text-2xl font-playfair-display font-bold text-gray-900">
                       {info.title}
                     </h3>
                     <p className="text-3xl font-bold" style={{ color: '#912822' }}>
@@ -158,7 +158,7 @@ const CijeneStudijaPage = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-8 text-center">
               {t('upis.cijeneStudija.paymentOptions')}
             </h3>
             
@@ -175,7 +175,7 @@ const CijeneStudijaPage = () => {
                   <div className="flex items-center mb-4">
                     <option.icon className="w-6 h-6 mr-3" style={{ color: '#f5f5f5' }} />
                     <div>
-                      <h4 className="text-xl font-noto-serif font-semibold">
+                      <h4 className="text-xl font-playfair-display font-semibold">
                         {option.title}
                       </h4>
                       <p className="text-red-200 text-sm font-gt-america">
@@ -203,7 +203,7 @@ const CijeneStudijaPage = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-8 text-center">
               {t('upis.cijeneStudija.specialOptions')}
             </h3>
             
@@ -221,7 +221,7 @@ const CijeneStudijaPage = () => {
                       <arrangement.icon className="w-6 h-6" style={{ color: '#912822' }} />
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-xl font-noto-serif font-semibold text-gray-900">
+                      <h4 className="text-xl font-playfair-display font-semibold text-gray-900">
                         {arrangement.title}
                       </h4>
                     </div>
@@ -256,7 +256,7 @@ const CijeneStudijaPage = () => {
           >
             <div className="text-center">
               <Clock className="w-12 h-12 mx-auto mb-4" style={{ color: '#f5f5f5' }} />
-              <h3 className="text-2xl font-noto-serif font-bold mb-4">
+              <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 {t('upis.cijeneStudija.importantNotes')}
               </h3>
               <div className="max-w-3xl mx-auto space-y-4 text-red-100">

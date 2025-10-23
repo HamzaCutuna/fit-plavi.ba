@@ -14,7 +14,7 @@ const KontaktPage = () => {
   const faqData = [
     {
       question: t('contact.faqItems.0.question') || 'Kako mogu kontaktirati studentsku službu?',
-      answer: t('contact.faqItems.0.answer') || 'Studentska služba je dostupna putem email-a na esluzba@edu.fit.ba ili telefonom na +38736/281-160. Radno vrijeme je ponedjeljak-petak od 11h do 14h.'
+      answer: t('contact.faqItems.0.answer') || 'Studentska služba je dostupna putem email-a na esluzba@edu.fit.ba ili telefonom na +387 36/281-160. Radno vrijeme je ponedjeljak-petak od 11h do 14h.'
     },
     {
       question: t('contact.faqItems.1.question') || 'Koji su načini plaćanja školarine?',
@@ -100,7 +100,7 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center"
                     >
-                        <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
                             {t('contact.title')}
                         </h1>
                         <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
@@ -128,7 +128,7 @@ const KontaktPage = () => {
                                     <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
                                         <contact.icon className="w-6 h-6" style={{ color: '#912822' }} />
                                     </div>
-                                    <h3 className="ml-3 text-xl font-noto-serif font-semibold text-gray-900">
+                                    <h3 className="ml-3 text-xl font-playfair-display font-semibold text-gray-900">
                                         {contact.title}
                                     </h3>
                                 </div>
@@ -196,7 +196,7 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-4">
                             {t('contact.location')}
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto font-gt-america">
@@ -242,7 +242,7 @@ const KontaktPage = () => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-4">
                             {t('contact.faq')}
                         </h2>
                         <p className="text-lg text-gray-600 font-gt-america">
@@ -263,7 +263,7 @@ const KontaktPage = () => {
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-noto-serif font-semibold text-gray-900 pr-4">
+                  <h3 className="text-lg font-playfair-display font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <ChevronDown 

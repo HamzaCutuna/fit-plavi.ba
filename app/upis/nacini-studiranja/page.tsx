@@ -92,7 +92,7 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-noto-serif font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.naciniStudiranja.title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
@@ -112,7 +112,7 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-noto-serif font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair-display font-bold text-gray-900 mb-6">
               {t('upis.naciniStudiranja.studyTypesTitle')}
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto font-gt-america">
@@ -139,7 +139,7 @@ const NaciniStudiranjaPage = () => {
                   <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
                     <type.icon className="w-6 h-6" style={{ color: '#912822' }} />
                   </div>
-                  <h3 className="ml-3 text-xl font-noto-serif font-semibold text-gray-900">
+                  <h3 className="ml-3 text-xl font-playfair-display font-semibold text-gray-900">
                     {type.title}
                   </h3>
                 </div>
@@ -162,7 +162,7 @@ const NaciniStudiranjaPage = () => {
             style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-noto-serif font-bold mb-4">
+              <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 DLWMS - Distance Learning Web Management System
               </h3>
               <p className="text-lg text-red-100 font-gt-america">
@@ -181,7 +181,7 @@ const NaciniStudiranjaPage = () => {
                 >
                   <div className="flex items-center mb-3">
                     <module.icon className="w-5 h-5 mr-3" style={{ color: '#f5f5f5' }} />
-                    <h4 className="font-noto-serif font-semibold text-white">
+                    <h4 className="font-playfair-display font-semibold text-white">
                       {module.title}
                     </h4>
                   </div>
@@ -200,7 +200,7 @@ const NaciniStudiranjaPage = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-16"
           >
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-6 text-center">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-6 text-center">
               {t('upis.naciniStudiranja.examObligations')}
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed text-center font-gt-america">
@@ -214,7 +214,7 @@ const NaciniStudiranjaPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <h3 className="text-2xl font-noto-serif font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-playfair-display font-bold text-gray-900 mb-8 text-center">
               {t('upis.naciniStudiranja.learningResourcesTitle')}
             </h3>
             
@@ -232,7 +232,7 @@ const NaciniStudiranjaPage = () => {
                       <resource.icon className="w-6 h-6" style={{ color: '#912822' }} />
                     </div>
                     <div className="ml-3">
-                      <h4 className="text-xl font-noto-serif font-semibold text-gray-900">
+                      <h4 className="text-xl font-playfair-display font-semibold text-gray-900">
                         {resource.title}
                       </h4>
                       <p className="text-sm font-medium font-gt-america" style={{ color: '#912822' }}>
