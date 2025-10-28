@@ -187,7 +187,7 @@ export default function OsobljePage() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0" style={{ backgroundColor: '#912822' }}></div>
+        <div className="absolute inset-0 bg-primary-900/90"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/fakultet3.jpg')] bg-cover bg-center opacity-10"></div>
         
@@ -201,7 +201,7 @@ export default function OsobljePage() {
             <h1 className="text-5xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('staffPage.title')}
             </h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed font-gt-america">
               {t('staffPage.subtitle')}
             </p>
           </motion.div>
@@ -220,12 +220,9 @@ export default function OsobljePage() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 font-gt-america ${
                   activeFilter === category.id
-                    ? 'text-white shadow-lg'
+                    ? 'bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
-                style={{
-                  backgroundColor: activeFilter === category.id ? '#912822' : undefined
-                }}
               >
                 {category.name} ({category.count})
               </motion.button>
@@ -256,7 +253,7 @@ export default function OsobljePage() {
                   transition={{ duration: 0.6, delay: index * 0.05 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100"
                 >
-                  <div className="aspect-square flex items-center justify-center p-4" style={{ backgroundColor: '#912822' }}>
+                  <div className="aspect-square flex items-center justify-center p-4 bg-primary-600">
                     <Image 
                       src={member.image} 
                       alt={member.name}
@@ -267,9 +264,9 @@ export default function OsobljePage() {
                   </div>
                   <div className="p-4">
                     <h3 className="text-sm font-playfair-display font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
-                    <p className="text-xs font-medium mb-1" style={{ color: '#912822' }}>{member.position}</p>
+                    <p className="text-xs font-medium mb-1 text-primary-600">{member.position}</p>
                     <div className="flex items-center space-x-2 text-xs text-gray-600">
-                      <Mail className="w-3 h-3 flex-shrink-0" style={{ color: '#912822' }} />
+                      <Mail className="w-3 h-3 flex-shrink-0 text-primary-600" />
                       <span className="truncate">{member.email}</span>
                     </div>
                   </div>
@@ -281,7 +278,7 @@ export default function OsobljePage() {
       </section>
 
       {/* Kontakt sekcija */}
-      <section className="py-20" style={{ backgroundColor: '#912822' }}>
+      <section className="py-20 bg-primary-900/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -292,7 +289,7 @@ export default function OsobljePage() {
           >
             <h2 className="text-4xl font-playfair-display font-bold text-white mb-6">{t('staffPage.contact.title')}</h2>
             <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8 font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8 font-gt-america">
               {t('staffPage.contact.subtitle')}
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -305,7 +302,7 @@ export default function OsobljePage() {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.email')}</h3>
-                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">esluzba@edu.fit.ba</p>
+                  <p className="text-primary-100 group-hover:text-white transition-colors duration-300 font-gt-america">esluzba@edu.fit.ba</p>
                 </a>
               </div>
               <div className="text-center">
@@ -317,7 +314,7 @@ export default function OsobljePage() {
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.phone')}</h3>
-                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">+387 36 281 160</p>
+                  <p className="text-primary-100 group-hover:text-white transition-colors duration-300 font-gt-america">+387 36 281 160</p>
                 </a>
               </div>
               <div className="text-center">
@@ -331,7 +328,7 @@ export default function OsobljePage() {
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-playfair-display font-bold text-white mb-2">{t('staffPage.contact.address')}</h3>
-                  <p className="text-red-100 group-hover:text-white transition-colors duration-300 font-gt-america">Sjeverni logor br. 12, Mostar</p>
+                  <p className="text-primary-100 group-hover:text-white transition-colors duration-300 font-gt-america">Sjeverni logor br. 12, Mostar</p>
                 </a>
               </div>
             </div>

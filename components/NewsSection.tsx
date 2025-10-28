@@ -135,7 +135,7 @@ const NewsSection = () => {
 
               <button
                 onClick={() => handleOpenModal(featuredNews)}
-                className="inline-flex items-center text-red-800 hover:text-red-900 hover:cursor-pointer font-gt-america font-medium text-lg"
+                className="inline-flex items-center text-primary-700 hover:text-primary-800 hover:cursor-pointer font-gt-america font-medium text-lg"
               >
                 {t('common.readMore')}
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -182,7 +182,7 @@ const NewsSection = () => {
                 </h4>
                 <button
                   onClick={() => handleOpenModal(news)}
-                  className="inline-flex items-center text-red-800 hover:text-red-900 hover:cursor-pointer font-gt-america font-medium text-sm mt-auto"
+                  className="inline-flex items-center text-primary-700 hover:text-primary-800 hover:cursor-pointer font-gt-america font-medium text-sm mt-auto"
                 >
                   {t('common.readMore')}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -196,8 +196,7 @@ const NewsSection = () => {
         <div className="text-center">
           <a
             href="/vijesti"
-            className="inline-flex items-center px-8 py-4 text-white font-gt-america font-medium text-lg rounded hover:opacity-90 transition-colors duration-200"
-            style={{ backgroundColor: '#912822' }}
+            className="inline-flex items-center px-8 py-4 text-white font-gt-america font-medium text-lg bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4] transition-colors duration-200"
           >
             {t('news.viewAll')}
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -274,8 +273,7 @@ const NewsSection = () => {
 
                       <div className="mt-6 flex justify-end">
                         <button
-                          className="inline-flex justify-center rounded border border-transparent px-4 py-2 text-sm font-gt-america font-medium text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
-                          style={{ backgroundColor: '#912822' }}
+                          className="inline-flex justify-center border border-transparent px-4 py-2 text-sm font-gt-america font-medium text-white bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ring-primary))/0.4] focus-visible:ring-offset-2"
                           onClick={handleCloseModal}
                         >
                           {t('common.close')}

@@ -41,7 +41,7 @@ const StaUpisatiPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/fit2.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ const StaUpisatiPage = () => {
             <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.staUpisati.title')}
             </h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto font-gt-america">
               {t('upis.staUpisati.subtitle')}
             </p>
           </motion.div>
@@ -102,8 +102,8 @@ const StaUpisatiPage = () => {
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
-                    <feature.icon className="w-6 h-6" style={{ color: '#912822' }} />
+                  <div className="p-3 rounded-lg bg-primary-50">
+                    <feature.icon className="w-6 h-6 text-primary-600" />
                   </div>
                   <h3 className="ml-3 text-xl font-playfair-display font-semibold text-gray-900">
                     {feature.title}
@@ -130,7 +130,7 @@ const StaUpisatiPage = () => {
               {t('upis.staUpisati.continuousImprovementDesc')}
             </p>
             <div className="text-center">
-              <p className="text-xl font-semibold mb-4 font-gt-america" style={{ color: '#912822' }}>
+              <p className="text-xl font-semibold mb-4 font-gt-america text-primary-600">
                 {t('upis.staUpisati.visionMessage')}
               </p>
             </div>
@@ -141,20 +141,19 @@ const StaUpisatiPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="bg-gradient-to-r rounded-2xl shadow-xl p-8 text-white"
-            style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
+            className="bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-2xl shadow-xl p-8 text-white"
           >
             <div className="text-center mb-6">
               <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 {t('upis.staUpisati.informatorTitle')}
               </h3>
-              <p className="text-lg text-red-100 leading-relaxed font-gt-america">
+              <p className="text-lg text-primary-100 leading-relaxed font-gt-america">
                 {t('upis.staUpisati.informatorDescription')}
               </p>
             </div>
             
             <div className="text-center mb-6">
-              <p className="text-red-100 mb-4 font-gt-america">
+              <p className="text-primary-100 mb-4 font-gt-america">
                 {t('upis.staUpisati.informatorPurpose')}
               </p>
             </div>
@@ -167,8 +166,7 @@ const StaUpisatiPage = () => {
               <a
                 href="/documents/informator.pdf"
                 download="FIT-Informator.pdf"
-                className="inline-flex items-center px-8 py-4 bg-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group font-gt-america"
-                style={{ color: '#912822' }}
+                className="inline-flex items-center px-8 py-4 bg-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group font-gt-america text-primary-700 hover:text-primary-800"
               >
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 {t('upis.staUpisati.downloadInformator')}

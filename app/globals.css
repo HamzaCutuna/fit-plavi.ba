@@ -140,6 +140,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary brand (blue) */
+  --color-primary: #01AEF0;
+  --color-primary-50:  #E6F8FE;
+  --color-primary-100: #CFF1FD;
+  --color-primary-200: #A6E6FB;
+  --color-primary-300: #6FD7F8;
+  --color-primary-400: #39C6F4;
+  --color-primary-500: #01AEF0;
+  --color-primary-600: #0288C7;
+  --color-primary-700: #026FA3;
+  --color-primary-800: #085A84;
+  --color-primary-900: #0A4C6E;
+
+  /* For focus rings using arbitrary rgb() */
+  --ring-primary: 0 174 240; /* rgb of #01AEF0 */
 }
 
 @theme inline {
@@ -147,6 +163,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-geist-mono);
+
+  /* Map Tailwind color tokens to blue scale */
+  --color-primary-50:  #E6F8FE;
+  --color-primary-100: #CFF1FD;
+  --color-primary-200: #A6E6FB;
+  --color-primary-300: #6FD7F8;
+  --color-primary-400: #39C6F4;
+  --color-primary-500: #01AEF0;
+  --color-primary-600: #0288C7;
+  --color-primary-700: #026FA3;
+  --color-primary-800: #085A84;
+  --color-primary-900: #0A4C6E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -177,12 +205,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #912822, #7a1f1a, #6b1a16);
+  background: linear-gradient(to bottom, #01AEF0, #0288C7, #026FA3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #a52d28, #8b221e, #7a1f1a);
+  background: linear-gradient(to bottom, #39C6F4, #01AEF0, #0288C7);
 }
 
 /* Custom animations */
@@ -326,7 +354,7 @@ html {
 
 /* Enhanced focus states */
 .focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  @apply focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4] focus:ring-offset-2;
 }
 
 /* Loading states */

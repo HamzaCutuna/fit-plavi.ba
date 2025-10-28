@@ -12,7 +12,7 @@ const TerminiKonsultacijaPage = () => {
   const facultyMembers = [
     {
       name: "dr.sc. Nina Bijedić",
-      image: "/images/nina.png",
+      image: "/images/osoblje/nina.png",
       schedule: [
         "svaki radni dan od 15:00 - 16:00"
       ]
@@ -26,7 +26,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "dr.sc. Emina Junuz",
-      image: "/images/emina.jpg",
+      image: "/images/osoblje/emina.jpg",
       schedule: [
         "ponedjeljak od 12:00 - 14:00",
         "utorak od 09:00 - 10:00",
@@ -35,7 +35,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "dr.sc. Denis Mušić",
-      image: "/images/denis.jpg",
+      image: "/images/osoblje/denis.jpg",
       schedule: [
         "ponedjeljak 10:00 - 13:00",
         "utorak: 09:00 - 10:00"
@@ -43,7 +43,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "mr.sc. Sanja Kapetanović",
-      image: "/images/sanja.jpg",
+      image: "/images/osoblje/sanja.jpg",
       schedule: [
         "ponedjeljak 08:00 - 09:00",
         "utorak 10:00 - 12:00",
@@ -61,7 +61,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "mr.sc. Mohamed El Zayyat",
-      image: "/images/mohamed.png",
+      image: "/images/osoblje/mohamed.png",
       schedule: [
         "ponedjeljak 11:00 - 14:00",
         "utorak 11:00 - 13:00",
@@ -70,7 +70,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "mr.sc. Elda Sultić",
-      image: "/images/elda.jpg",
+      image: "/images/osoblje/elda.jpg",
       schedule: [
         "srijeda 12:00 - 13:00",
         "četvrtak 10:00 - 12:00",
@@ -79,7 +79,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "mr.sc. Adil Joldić",
-      image: "/images/adil.jpg",
+      image: "/images/osoblje/adil.jpg",
       schedule: [
         "ponedjeljak 14:00 - 15:00",
         "utorak 14:00 - 15:00",
@@ -90,7 +90,7 @@ const TerminiKonsultacijaPage = () => {
     },
     {
       name: "mr.sc. Goran Škondrić",
-      image: "/images/goran.jpg",
+      image: "/images/osoblje/goran.jpg",
       schedule: [
         "srijeda 10:00 - 12:00",
         "četvrtak 10:00 - 13:00"
@@ -147,7 +147,7 @@ const TerminiKonsultacijaPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/fakultet3.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +182,7 @@ const TerminiKonsultacijaPage = () => {
               >
                 {/* Faculty Member Header */}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#91282220' }}>
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-primary-50">
                     {member.image ? (
                       <Image 
                         src={member.image} 
@@ -192,7 +192,7 @@ const TerminiKonsultacijaPage = () => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <User className="w-6 h-6" style={{ color: '#912822' }} />
+                      <User className="w-6 h-6 text-primary-600" />
                     )}
                   </div>
                   <div className="ml-3">
@@ -205,7 +205,7 @@ const TerminiKonsultacijaPage = () => {
                 {/* Schedule */}
                 <div className="space-y-3 flex-grow">
                   <div className="flex items-center mb-3">
-                    <Clock className="w-4 h-4 mr-2" style={{ color: '#912822' }} />
+                    <Clock className="w-4 h-4 mr-2 text-primary-600" />
                     <span className="text-sm font-medium text-gray-700 font-gt-america">
                       {t('studij.termini-konsultacija.scheduleLabel')}
                     </span>
@@ -224,7 +224,7 @@ const TerminiKonsultacijaPage = () => {
                 {/* Contact Info */}
                 <div className="mt-auto pt-4 border-t border-gray-100">
                   <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2" style={{ color: '#912822' }} />
+                    <MapPin className="w-4 h-4 mr-2 text-primary-600" />
                     <span className="font-gt-america">{t('studij.termini-konsultacija.facultyLocation')}</span>
                   </div>
                 </div>
@@ -237,8 +237,7 @@ const TerminiKonsultacijaPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 rounded-2xl shadow-xl p-8 text-white"
-            style={{ backgroundColor: '#912822' }}
+            className="mt-16 rounded-2xl shadow-xl p-8 text-white bg-primary-600"
           >
             <div className="text-center">
               <Calendar className="w-12 h-12 mx-auto mb-4 text-white/70" />

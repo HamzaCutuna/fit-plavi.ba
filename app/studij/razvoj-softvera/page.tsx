@@ -118,7 +118,7 @@ const RazvojSoftveraPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/razvoj-software.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,10 +162,7 @@ const RazvojSoftveraPage = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors duration-200 shadow-lg"
-              style={{ backgroundColor: '#912822' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a1f1a'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#912822'}
+              className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors duration-200 shadow-lg bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4]"
             >
               <Download className="w-5 h-5 mr-2" />
               {t('studij.razvoj-softvera.downloadSyllabus')}
@@ -185,10 +182,7 @@ const RazvojSoftveraPage = () => {
                 {/* Year Header */}
                 <button
                   onClick={() => toggleYear(year.year)}
-                  className="w-full px-6 py-4 text-white flex items-center justify-between transition-all duration-300"
-                  style={{ backgroundColor: '#912822' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a1f1a'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#912822'}
+                  className="w-full px-6 py-4 text-white flex items-center justify-between transition-all duration-300 bg-primary-600 hover:bg-primary-700 active:bg-primary-800"
                 >
                   <div className="flex items-center">
                     <BookOpen className="w-6 h-6 mr-3" />
@@ -221,7 +215,7 @@ const RazvojSoftveraPage = () => {
                           <div key={semester.semester} className="space-y-4">
                             {/* Semester Header */}
                             <div className="flex items-center">
-                              <Calendar className="w-5 h-5 mr-2" style={{ color: '#912822' }} />
+                              <Calendar className="w-5 h-5 mr-2 text-primary-600" />
                               <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                                 {semester.semester}. {t('studij.razvoj-softvera.semester')}
                               </h4>
@@ -250,8 +244,7 @@ const RazvojSoftveraPage = () => {
                                       className={`transition-colors duration-200 ${
                                         subjectIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                                       }`}
-                                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#91282210'}
-                                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = subjectIndex % 2 === 0 ? 'white' : '#f9fafb'}
+                                      
                                     >
                                       <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-gray-900 font-gt-america">
                                         {subject.rb}
@@ -259,18 +252,18 @@ const RazvojSoftveraPage = () => {
                                       <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 font-gt-america">
                                         {subject.name}
                                       </td>
-                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center font-gt-america" style={{ color: '#912822' }}>
+                                      <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center font-gt-america text-primary-600">
                                         {subject.ects}
                                       </td>
                                     </tr>
                                   ))}
                                 </tbody>
-                                <tfoot style={{ backgroundColor: '#91282210' }}>
+                                <tfoot className="bg-primary-50">
                                   <tr>
                                     <td colSpan={2} className="border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 font-gt-america">
                                       {t('studij.razvoj-softvera.totalEctsFor')} {semester.semester}. {t('studij.razvoj-softvera.semester')}:
                                     </td>
-                                    <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center font-gt-america" style={{ color: '#912822' }}>
+                                    <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center font-gt-america text-primary-600">
                                       {semester.subjects.reduce((total, subject) => total + subject.ects, 0)}
                                     </td>
                                   </tr>
@@ -292,8 +285,7 @@ const RazvojSoftveraPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 rounded-2xl shadow-xl p-8 text-white"
-            style={{ backgroundColor: '#912822' }}
+            className="mt-16 rounded-2xl shadow-xl p-8 text-white bg-primary-600"
           >
             <div className="text-center">
               <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />

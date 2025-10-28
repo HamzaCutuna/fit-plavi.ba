@@ -69,13 +69,8 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-      isScrolled || isMenuOpen
-        ? 'shadow-lg' 
-        : ''
-    }`}
-    style={{
-      backgroundColor: isScrolled || isMenuOpen ? '#912822' : 'transparent'
-    }}>
+      (isScrolled || isMenuOpen) ? 'bg-primary-900/95 shadow-lg' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
@@ -98,7 +93,7 @@ const Navbar = () => {
                   className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:opacity-0"
                 />
                 <Image 
-                  src="/images/logo-veci-hover.png" 
+                  src="/images/logo-veci-hover-plavi.png" 
                   alt="FIT Mostar Logo Hover" 
                   width={48}
                   height={48}
@@ -107,8 +102,8 @@ const Navbar = () => {
               </div>
               <span className={`text-xs sm:text-sm md:text-base lg:text-lg font-playfair-display font-bold transition-colors duration-300 ease-in-out ${
                 isScrolled 
-                  ? 'text-white hover:text-red-100' 
-                  : 'text-white hover:text-red-100'
+                  ? 'text-white hover:text-primary-100' 
+                  : 'text-white hover:text-primary-100'
               }`}>
                 {t('navbar.logo')}
               </span>
@@ -143,8 +138,8 @@ const Navbar = () => {
                       <button
                         className={`relative px-4 py-2 font-medium transition-all duration-300 group flex items-center space-x-1 ${
                           isScrolled 
-                            ? 'text-white hover:text-red-100' 
-                            : 'text-white hover:text-red-100'
+                            ? 'text-white hover:text-primary-100' 
+                            : 'text-white hover:text-primary-100'
                         }`}
                       >
                         <span>{item.name}</span>
@@ -153,9 +148,7 @@ const Navbar = () => {
                           (item.name === t('navbar.enrollment') && isUpisDropdownOpen) ||
                           (item.name === t('navbar.studies') && isStudijDropdownOpen) ? 'rotate-180' : ''
                         }`} />
-                        <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0`}
-                          style={{ backgroundColor: '#f5f5f5' }}
-                        ></span>
+                        <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0 bg-primary-400`}></span>
                       </button>
                       
                       <AnimatePresence>
@@ -183,7 +176,7 @@ const Navbar = () => {
                                   href={(dropdownItem as { href: string }).href}
                                   target={'target' in dropdownItem ? dropdownItem.target : undefined}
                                   rel={'target' in dropdownItem && dropdownItem.target === '_blank' ? 'noopener noreferrer' : undefined}
-                                  className="block px-4 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 border-b border-gray-50 last:border-b-0"
+                                  className="block px-4 py-3 text-gray-700 hover:text-primary-700 hover:bg-primary-50 transition-all duration-200 border-b border-gray-50 last:border-b-0"
                                 >
                                   {(dropdownItem as { name: string }).name}
                                 </a>
@@ -198,14 +191,12 @@ const Navbar = () => {
                       href={item.href}
                       className={`relative px-4 py-2 font-medium transition-all duration-300 group ${
                         isScrolled 
-                          ? 'text-white hover:text-red-100' 
-                          : 'text-white hover:text-red-100'
+                          ? 'text-white hover:text-primary-100' 
+                          : 'text-white hover:text-primary-100'
                       }`}
                     >
                       {item.name}
-                      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0`}
-                        style={{ backgroundColor: '#f5f5f5' }}
-                      ></span>
+                      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0 bg-primary-400`}></span>
                     </a>
                   )}
                 </motion.div>
@@ -223,8 +214,8 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className={`transition-colors p-2 rounded-lg ${
                 isScrolled 
-                  ? 'text-white hover:text-red-100 hover:bg-white/10' 
-                  : 'text-white hover:text-red-100 hover:bg-white/10'
+                  ? 'text-white hover:text-primary-100 hover:bg-white/10' 
+                  : 'text-white hover:text-primary-100 hover:bg-white/10'
               }`}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -244,9 +235,7 @@ const Navbar = () => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-4"
       >
-        <div className="lg:hidden border-t border-white/20 shadow-lg"
-          style={{ backgroundColor: isScrolled ? '#912822' : 'rgba(145, 40, 34, 0.95)' }}
-        >
+          <div className="lg:hidden border-t border-white/20 shadow-lg bg-primary-900/95">
           <div className="px-4 py-6 space-y-4">
             {menuItems.map((item, index) => (
               <div key={item.name}>
@@ -258,7 +247,7 @@ const Navbar = () => {
                         if (item.name === t('navbar.enrollment')) setIsUpisDropdownOpen(!isUpisDropdownOpen);
                         if (item.name === t('navbar.studies')) setIsStudijDropdownOpen(!isStudijDropdownOpen);
                       }}
-                      className="flex items-center justify-between w-full text-white hover:text-red-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20"
+                      className="flex items-center justify-between w-full text-white hover:text-primary-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -298,7 +287,7 @@ const Navbar = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="block text-red-100 hover:text-white text-base font-medium transition-colors duration-200 py-2"
+                                className="block text-primary-100 hover:text-white text-base font-medium transition-colors duration-200 py-2"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {(dropdownItem as { name: string }).name}
@@ -315,7 +304,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="block text-white hover:text-red-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20 last:border-b-0"
+                    className="block text-white hover:text-primary-100 text-lg font-medium transition-colors duration-200 py-2 border-b border-white/20 last:border-b-0"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

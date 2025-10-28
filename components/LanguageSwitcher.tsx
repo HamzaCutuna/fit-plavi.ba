@@ -21,8 +21,8 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isScrolled = false 
       onClick={toggleLanguage}
       className={`relative px-4 py-2 font-medium transition-all duration-300 group inline-flex items-center ${
         isScrolled 
-          ? 'text-white hover:text-red-100' 
-          : 'text-white hover:text-red-100'
+          ? 'text-white hover:text-primary-100' 
+          : 'text-white hover:text-primary-100'
       }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -32,9 +32,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isScrolled = false 
       <span className="uppercase font-semibold">
         {language}
       </span>
-      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0`}
-        style={{ backgroundColor: '#912822' }}
-      ></span>
+      <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full group-hover:left-0 bg-primary-400`}></span>
     </motion.button>
   );
 };

@@ -84,7 +84,7 @@ const VijestiPage = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0" style={{ backgroundColor: '#912822' }}></div>
+        <div className="absolute inset-0 bg-primary-900/90"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/fakultet4.jpg')] bg-cover bg-center opacity-10"></div>
         
@@ -99,7 +99,7 @@ const VijestiPage = () => {
             <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('newsPage.title')}
             </h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto font-gt-america">
               {t('newsPage.subtitle')}
             </p>
           </motion.div>
@@ -234,11 +234,7 @@ const VijestiPage = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 font-gt-america"
-                          style={{ 
-                            backgroundColor: '#912822',
-                            '--tw-ring-color': '#912822'
-                          } as React.CSSProperties}
+                          className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ring-primary))/0.4] focus-visible:ring-offset-2 font-gt-america"
                           onClick={() => setIsModalOpen(false)}
                         >
                           {t('common.close')}

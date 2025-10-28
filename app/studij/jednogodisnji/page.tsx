@@ -45,7 +45,7 @@ const JednogodisnjiPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/master1.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,10 +89,7 @@ const JednogodisnjiPage = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors duration-200 shadow-lg"
-              style={{ backgroundColor: '#912822' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a1f1a'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#912822'}
+              className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors duration-200 shadow-lg bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4]"
             >
               <Download className="w-5 h-5 mr-2" />
               {t('studij.jednogodisnji.downloadSyllabus')}
@@ -107,7 +104,7 @@ const JednogodisnjiPage = () => {
             className="bg-white rounded-xl shadow-lg overflow-hidden mb-16"
           >
             {/* Table Header */}
-            <div className="px-6 py-4" style={{ backgroundColor: '#912822' }}>
+            <div className="px-6 py-4 bg-primary-600">
               <div className="flex items-center">
                 <BookOpen className="w-6 h-6 text-white mr-3" />
                 <h3 className="text-xl font-bold text-white font-playfair-display">
@@ -147,8 +144,7 @@ const JednogodisnjiPage = () => {
                           className={`transition-colors duration-200 ${
                             subjectIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                           }`}
-                          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#91282210'}
-                          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = subjectIndex % 2 === 0 ? 'white' : '#f9fafb'}
+                          
                         >
                           <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-gray-900 font-gt-america">
                             {semester.semester}
@@ -159,19 +155,19 @@ const JednogodisnjiPage = () => {
                           <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center text-gray-600 font-gt-america">
                             {subject.elective ? t('studij.jednogodisnji.yes') : t('studij.jednogodisnji.no')}
                           </td>
-                          <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center font-gt-america" style={{ color: '#912822' }}>
+                          <td className="border border-gray-200 px-4 py-3 text-sm font-medium text-center font-gt-america text-primary-600">
                             {subject.ects}
                           </td>
                         </tr>
                       ))
                     ))}
                   </tbody>
-                  <tfoot style={{ backgroundColor: '#91282210' }}>
+                  <tfoot className="bg-primary-50">
                     <tr>
                                           <td colSpan={3} className="border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 font-gt-america">
                       {t('studij.jednogodisnji.totalEcts')}:
                     </td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center font-gt-america" style={{ color: '#912822' }}>
+                      <td className="border border-gray-200 px-4 py-3 text-sm font-bold text-center font-gt-america text-primary-600">
                         {calculateTotalECTS(studyPlan[0])}
                       </td>
                     </tr>
@@ -191,33 +187,33 @@ const JednogodisnjiPage = () => {
             {/* First Semester */}
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col">
               <div className="flex items-center mb-4">
-                <Calendar className="w-6 h-6 mr-3" style={{ color: '#912822' }} />
+                <Calendar className="w-6 h-6 mr-3 text-primary-600" />
                 <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                   1. {t('studij.jednogodisnji.semester')}
                 </h4>
               </div>
               <div className="space-y-3 flex-grow">
-                  <div className="flex justify-between items-center p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                <div className="flex justify-between items-center p-3 rounded-lg bg-primary-50">
                   <span className="text-sm font-medium text-gray-700 font-gt-america">Upravljanje softverskim projektima</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>9 ECTS</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">9 ECTS</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                   <span className="text-sm font-medium text-gray-700 font-gt-america">Obezbjeđenje kvaliteta softvera</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>9 ECTS</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">9 ECTS</span>
                 </div>
-                  <div className="flex justify-between items-center p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                <div className="flex justify-between items-center p-3 rounded-lg bg-primary-50">
                   <span className="text-sm font-medium text-gray-700 font-gt-america">Softver projekat</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>9 ECTS</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">9 ECTS</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                   <span className="text-sm font-medium text-gray-700 font-gt-america">Internacionalizacija poslovanja</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>6 ECTS</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">6 ECTS</span>
                 </div>
               </div>
               <div className="mt-auto pt-4 border-t border-gray-100">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-gray-700 font-gt-america">{t('studij.jednogodisnji.totalEctsFor')} 1. {t('studij.jednogodisnji.semester')}:</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>33 {t('studij.jednogodisnji.totalEcts')}</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">33 {t('studij.jednogodisnji.totalEcts')}</span>
                 </div>
               </div>
             </div>
@@ -225,21 +221,21 @@ const JednogodisnjiPage = () => {
             {/* Second Semester */}
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col">
               <div className="flex items-center mb-4">
-                <GraduationCap className="w-6 h-6 mr-3" style={{ color: '#912822' }} />
+                <GraduationCap className="w-6 h-6 mr-3 text-primary-600" />
                 <h4 className="text-lg font-semibold text-gray-900 font-playfair-display">
                   2. {t('studij.jednogodisnji.semester')}
                 </h4>
               </div>
               <div className="space-y-3 flex-grow">
-                  <div className="flex justify-between items-center p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
+                <div className="flex justify-between items-center p-3 rounded-lg bg-primary-50">
                   <span className="text-sm font-medium text-gray-700 font-gt-america">Završni rad nakon drugog ciklusa</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>27 ECTS</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">27 ECTS</span>
                 </div>
               </div>
               <div className="mt-auto pt-4 border-t border-gray-100">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-gray-700 font-gt-america">{t('studij.jednogodisnji.totalEctsFor')} 2. {t('studij.jednogodisnji.semester')}:</span>
-                  <span className="text-sm font-bold font-gt-america" style={{ color: '#912822' }}>27 {t('studij.jednogodisnji.totalEcts')}</span>
+                  <span className="text-sm font-bold font-gt-america text-primary-600">27 {t('studij.jednogodisnji.totalEcts')}</span>
                 </div>
               </div>
             </div>
@@ -250,8 +246,7 @@ const JednogodisnjiPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="rounded-2xl shadow-xl p-8 text-white"
-            style={{ backgroundColor: '#912822' }}
+            className="rounded-2xl shadow-xl p-8 text-white bg-primary-600"
           >
             <div className="text-center">
               <Users className="w-12 h-12 mx-auto mb-4 text-white/70" />

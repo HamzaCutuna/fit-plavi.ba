@@ -82,7 +82,7 @@ const NaciniStudiranjaPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ const NaciniStudiranjaPage = () => {
             <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.naciniStudiranja.title')}
             </h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto font-gt-america">
               {t('upis.naciniStudiranja.subtitle')}
             </p>
           </motion.div>
@@ -136,8 +136,8 @@ const NaciniStudiranjaPage = () => {
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
-                    <type.icon className="w-6 h-6" style={{ color: '#912822' }} />
+                  <div className="p-3 rounded-lg bg-primary-50">
+                    <type.icon className="w-6 h-6 text-primary-600" />
                   </div>
                   <h3 className="ml-3 text-xl font-playfair-display font-semibold text-gray-900">
                     {type.title}
@@ -158,14 +158,13 @@ const NaciniStudiranjaPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-r rounded-2xl shadow-xl p-8 mb-16 text-white"
-            style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
+            className="bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-2xl shadow-xl p-8 mb-16 text-white"
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 DLWMS - Distance Learning Web Management System
               </h3>
-              <p className="text-lg text-red-100 font-gt-america">
+              <p className="text-lg text-primary-100 font-gt-america">
                 {t('upis.naciniStudiranja.dlwmsSubtitle')}
               </p>
             </div>
@@ -185,7 +184,7 @@ const NaciniStudiranjaPage = () => {
                       {module.title}
                     </h4>
                   </div>
-                  <p className="text-red-100 text-sm font-gt-america">
+                  <p className="text-primary-100 text-sm font-gt-america">
                     {module.description}
                   </p>
                 </motion.div>
@@ -228,14 +227,14 @@ const NaciniStudiranjaPage = () => {
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
-                      <resource.icon className="w-6 h-6" style={{ color: '#912822' }} />
+                    <div className="p-3 rounded-lg bg-primary-50">
+                      <resource.icon className="w-6 h-6 text-primary-600" />
                     </div>
                     <div className="ml-3">
                       <h4 className="text-xl font-playfair-display font-semibold text-gray-900">
                         {resource.title}
                       </h4>
-                      <p className="text-sm font-medium font-gt-america" style={{ color: '#912822' }}>
+                      <p className="text-sm font-medium font-gt-america text-primary-600">
                         {resource.subtitle}
                       </p>
                     </div>

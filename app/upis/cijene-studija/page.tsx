@@ -69,7 +69,7 @@ const CijeneStudijaPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20" style={{ backgroundColor: '#912822' }}>
+      <section className="relative pt-32 pb-20 bg-primary-900/90">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/images/eksterijer3.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ const CijeneStudijaPage = () => {
             <h1 className="text-4xl md:text-6xl font-playfair-display font-bold text-white mb-6">
               {t('upis.cijeneStudija.title')}
             </h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto font-gt-america">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto font-gt-america">
               {t('upis.cijeneStudija.subtitle')}
             </p>
           </motion.div>
@@ -123,11 +123,11 @@ const CijeneStudijaPage = () => {
                 className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <div className="p-4 rounded-xl" style={{ backgroundColor: '#91282220' }}>
+                  <div className="p-4 rounded-xl bg-primary-50">
                     {info.icon ? (
-                      <info.icon className="w-8 h-8" style={{ color: '#912822' }} />
+                      <info.icon className="w-8 h-8 text-primary-600" />
                     ) : (
-                      <span className="text-lg font-bold" style={{ color: '#912822' }}>
+                      <span className="text-lg font-bold text-primary-600">
                         {info.iconText}
                       </span>
                     )}
@@ -136,7 +136,7 @@ const CijeneStudijaPage = () => {
                     <h3 className="text-2xl font-playfair-display font-bold text-gray-900">
                       {info.title}
                     </h3>
-                    <p className="text-3xl font-bold" style={{ color: '#912822' }}>
+                    <p className="text-3xl font-bold text-primary-600">
                       {info.amount}
                     </p>
                   </div>
@@ -169,8 +169,7 @@ const CijeneStudijaPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                  className="bg-gradient-to-br rounded-xl shadow-xl p-6 text-white"
-                  style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
+                  className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 rounded-xl shadow-xl p-6 text-white"
                 >
                   <div className="flex items-center mb-4">
                     <option.icon className="w-6 h-6 mr-3" style={{ color: '#f5f5f5' }} />
@@ -178,14 +177,14 @@ const CijeneStudijaPage = () => {
                       <h4 className="text-xl font-playfair-display font-semibold">
                         {option.title}
                       </h4>
-                      <p className="text-red-200 text-sm font-gt-america">
+                      <p className="text-primary-100 text-sm font-gt-america">
                         {option.subtitle}
                       </p>
                     </div>
                   </div>
                   <ul className="space-y-2">
                     {option.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-red-100 font-gt-america">
+                      <li key={itemIndex} className="flex items-center text-primary-100 font-gt-america">
                         <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#f5f5f5' }}></div>
                         {item}
                       </li>
@@ -217,8 +216,8 @@ const CijeneStudijaPage = () => {
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start mb-4">
-                    <div className="p-3 rounded-lg" style={{ backgroundColor: '#91282220' }}>
-                      <arrangement.icon className="w-6 h-6" style={{ color: '#912822' }} />
+                    <div className="p-3 rounded-lg bg-primary-50">
+                      <arrangement.icon className="w-6 h-6 text-primary-600" />
                     </div>
                     <div className="ml-4">
                       <h4 className="text-xl font-playfair-display font-semibold text-gray-900">
@@ -229,13 +228,12 @@ const CijeneStudijaPage = () => {
                   <p className="text-gray-600 leading-relaxed font-gt-america">
                     {arrangement.description}
                   </p>
-                                     {arrangement.hasLink && (
-                     <a 
+                   {arrangement.hasLink && (
+                    <a 
                        href="/documents/odluka.pdf" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       className="mt-4 inline-flex items-center px-4 py-2 text-white rounded-lg transition-colors duration-200 font-gt-america"
-                       style={{ backgroundColor: '#912822' }}
+                      className="mt-4 inline-flex items-center px-4 py-2 text-white rounded-lg transition-colors duration-200 font-gt-america bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4]"
                      >
                        <Download className="w-4 h-4 mr-2" />
                        {t('upis.cijeneStudija.viewDecision')}
@@ -251,15 +249,14 @@ const CijeneStudijaPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
-            className="bg-gradient-to-r rounded-2xl shadow-xl p-8 text-white"
-            style={{ background: 'linear-gradient(135deg, #912822, #7a1f1a)' }}
+            className="bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-2xl shadow-xl p-8 text-white"
           >
             <div className="text-center">
               <Clock className="w-12 h-12 mx-auto mb-4" style={{ color: '#f5f5f5' }} />
               <h3 className="text-2xl font-playfair-display font-bold mb-4">
                 {t('upis.cijeneStudija.importantNotes')}
               </h3>
-              <div className="max-w-3xl mx-auto space-y-4 text-red-100">
+              <div className="max-w-3xl mx-auto space-y-4 text-primary-100">
                 <p className="leading-relaxed font-gt-america">
                   {t('upis.cijeneStudija.note1')}
                 </p>

@@ -85,8 +85,8 @@ const ProgramsShowcase = () => {
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg mb-4`} style={{ backgroundColor: '#91282220' }}>
-                      <program.icon className="w-8 h-8" style={{ color: '#912822' }} />
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg mb-4 bg-primary-50`}>
+                      <program.icon className="w-8 h-8 text-primary-600" />
                     </div>
                   </div>
                   <div className="text-right">
@@ -123,8 +123,7 @@ const ProgramsShowcase = () => {
                 {/* CTA */}
                 <a
                   href={program.href}
-                  className="inline-flex items-center px-6 py-3 text-white font-gt-america font-medium rounded hover:opacity-90 transition-colors duration-200"
-                  style={{ backgroundColor: '#912822' }}
+                  className="inline-flex items-center px-6 py-3 text-white font-gt-america font-medium bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4] transition-colors duration-200"
                 >
                   {t('programs.learnMore') || 'Saznaj više'}
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -165,7 +164,7 @@ const ProgramsShowcase = () => {
                 </p>
                 <a
                   href={program.href}
-                  className="inline-flex items-center text-red-800 hover:text-red-900 font-gt-america font-medium"
+                  className="inline-flex items-center text-primary-700 hover:text-primary-800 font-gt-america font-medium"
                 >
                   {t('programs.learnMore') || 'Saznaj više'}
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -179,8 +178,7 @@ const ProgramsShowcase = () => {
         <div className="text-center mt-16">
           <a
             href="/kontakt"
-            className="inline-flex items-center px-8 py-4 text-white font-gt-america font-medium text-lg rounded hover:opacity-90 transition-colors duration-200"
-            style={{ backgroundColor: '#912822' }}
+            className="inline-flex items-center px-8 py-4 text-white font-gt-america font-medium text-lg bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4] transition-colors duration-200"
           >
             <Users className="mr-2 w-5 h-5" />
             {t('programs.enrollNow') || 'Prijavite se sada'}

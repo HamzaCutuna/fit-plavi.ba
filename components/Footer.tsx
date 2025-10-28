@@ -46,8 +46,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:opacity-80 rounded flex items-center justify-center transition-colors duration-200"
-                  style={{ backgroundColor: '#912822' }}
+                  className="w-10 h-10 rounded flex items-center justify-center transition-colors duration-200 bg-primary-600 hover:bg-primary-700"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -184,8 +183,7 @@ const Footer = () => {
       {showScrollButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 text-white rounded-full shadow-lg hover:shadow-xl hover:cursor-pointer transition-all duration-200 flex items-center justify-center z-40 group"
-          style={{ backgroundColor: '#912822' }}
+          className="fixed bottom-8 right-8 w-12 h-12 text-white rounded-full shadow-lg hover:shadow-xl hover:cursor-pointer transition-all duration-200 flex items-center justify-center z-40 group bg-primary-600 hover:bg-primary-700 active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--ring-primary))/0.4]"
           aria-label="Back to top"
         >
           <ArrowUp className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-1" />
