@@ -17,7 +17,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Denis Mušić',
       position: 'Vanredni profesor',
-      image: '/images/denis.jpg',
+      image: '/images/osoblje/denis.jpg',
       email: 'denis@edu.fit.ba',
       phone: '+387 36 570 001',
       category: 'nastavnici'
@@ -25,7 +25,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Dragi Tiro',
       position: 'Redovni profesor',
-      image: '/images/dragi.jpg',
+      image: '/images/osoblje/dragi.jpg',
       email: 'dragi.tiro@edu.fit.ba',
       phone: '+387 36 570 002',
       category: 'nastavnici'
@@ -33,7 +33,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Dražena Gašpar',
       position: 'Redovni profesor',
-      image: '/images/drazena.jpg',
+      image: '/images/osoblje/drazena.jpg',
       email: 'drazena.gaspar@edu.fit.ba',
       phone: '+387 36 570 003',
       category: 'nastavnici'
@@ -41,7 +41,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Elmir Babović',
       position: 'Vanredni profesor',
-      image: '/images/elmir.jpg',
+      image: '/images/osoblje/elmir.jpg',
       email: 'elmir.babovic@edu.fit.ba',
       phone: '+387 36 570 004',
       category: 'nastavnici'
@@ -49,7 +49,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Emina Junuz',
       position: 'Vanredni profesor',
-      image: '/images/emina.jpg',
+      image: '/images/osoblje/emina.jpg',
       email: 'emina@edu.fit.ba',
       phone: '+387 36 570 005',
       category: 'nastavnici'
@@ -65,7 +65,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Migdat Hodžić',
       position: 'Redovni profesor',
-      image: '/images/migdat.jpg',
+      image: '/images/osoblje/migdat.jpg',
       email: 'migdat.hodzic@edu.fit.ba',
       phone: '+387 36 570 007',
       category: 'nastavnici'
@@ -73,7 +73,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Nina Bijedić',
       position: 'Vanredni profesor',
-      image: '/images/nina.png',
+      image: '/images/osoblje/nina.png',
       email: 'nbijedic@edu.fit.ba',
       phone: '+387 36 570 008',
       category: 'nastavnici'
@@ -81,7 +81,7 @@ export default function OsobljePage() {
     {
       name: 'dr. sc. Senad Rahimić',
       position: 'Redovni profesor',
-      image: '/images/senad.jpg',
+      image: '/images/osoblje/senad.jpg',
       email: 'senad.rahimic@edu.fit.ba',
       phone: '+387 36 570 009',
       category: 'nastavnici'
@@ -90,7 +90,7 @@ export default function OsobljePage() {
     {
       name: 'mr. sc. Adil Joldić',
       position: 'Stručnjak iz prakse',
-      image: '/images/adil.jpg',
+      image: '/images/osoblje/adil.jpg',
       email: 'adil@edu.fit.ba',
       phone: '+387 36 570 010',
       category: 'saradnici'
@@ -106,7 +106,7 @@ export default function OsobljePage() {
     {
       name: 'mr. Elda Sultić Faladžić',
       position: 'Asistent',
-      image: '/images/elda.jpg',
+      image: '/images/osoblje/elda.jpg',
       email: 'elda@edu.fit.ba',
       phone: '+387 36 570 012',
       category: 'saradnici'
@@ -114,7 +114,7 @@ export default function OsobljePage() {
     {
       name: 'mr. sc. Goran Škondrić',
       position: 'Viši asistent',
-      image: '/images/goran.jpg',
+      image: '/images/osoblje/goran.jpg',
       email: 'goran@edu.fit.ba',
       phone: '+387 36 570 013', 
       category: 'saradnici'
@@ -130,7 +130,7 @@ export default function OsobljePage() {
     {
       name: 'Kemal Šanjta',
       position: 'Stručnjak iz prakse',
-      image: '/images/kemal2.jpg',
+      image: '/images/osoblje/kemal2.jpg',
       email: 'kemal.sanjta@edu.fit.ba',
       phone: '+387 36 570 015',
       category: 'saradnici'
@@ -138,7 +138,7 @@ export default function OsobljePage() {
     {
       name: 'mr. sc. Mohamed El-Zayat',
       position: 'Viši asistent',
-      image: '/images/mohamed.png',
+      image: '/images/osoblje/mohamed.png',
       email: 'mohamed@fit.ba',
       phone: '+387 36 570 016',
       category: 'saradnici'
@@ -146,7 +146,7 @@ export default function OsobljePage() {
     {
       name: 'mr. sc. Sanja Kapetanović',
       position: 'Viši asistent',
-      image: '/images/sanja.jpg',
+      image: '/images/osoblje/sanja.jpg',
       email: 'sanja@edu.fit.ba',
       phone: '+387 36 570 017',
       category: 'saradnici'

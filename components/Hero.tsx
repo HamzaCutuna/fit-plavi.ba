@@ -9,47 +9,50 @@ const Hero = () => {
   return (
     <section className="relative bg-white">
       {/* Hero Image */}
-      <div className="relative h-[60vh] min-h-[500px] bg-gray-100">
+      <div className="relative min-h-[66vh] sm:min-h-[70vh] md:min-h-[72vh] lg:min-h-[78vh] pt-[calc(var(--nav-h,60px)+1.25rem)] sm:pt-[calc(var(--nav-h,64px)+1.5rem)] md:pt-[calc(var(--nav-h,72px)+1.5rem)] bg-gray-100 overflow-hidden isolate">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('/images/hero-slike/hero2.jpg')`,
+            objectFit: 'cover',
+            objectPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Gradient overlay - lighter on mobile */}
+        <div className="absolute inset-0 bg-black/25 sm:bg-black/27 md:bg-black/30" />
         
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair-display font-bold mb-6 leading-tight">
-              {t('hero.welcome') || 'Dobrodošli na'}
-              <br />
-              <span className="text-red-100">
-                {t('hero.title')}
-              </span>
-            </h1>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col gap-y-3 sm:gap-y-4 md:gap-y-6">
+            <div className="text-center">
+              <div className="font-playfair-display font-bold text-[clamp(28px,7vw,40px)] md:text-5xl lg:text-6xl tracking-tight leading-[1.1] space-y-1.5">
+                <span className="block text-white">{t('hero.welcome') || 'Dobrodošli na'}</span>
+                <span className="block text-red-100 whitespace-nowrap">Fakultet informacijskih</span>
+                <span className="block text-red-100">tehnologija</span>
+              </div>
+            </div>
             
-            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed font-gt-america font-light">
+            <p className="text-sm sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-gt-america font-light">
               {t('hero.description')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <a
                 href="/fakultet"
-                className="inline-flex items-center justify-center px-8 py-3 text-white font-gt-america font-medium text-lg hover:opacity-90 transition-colors duration-200 w-full sm:w-auto"
+                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg text-white font-gt-america font-medium hover:opacity-90 transition-colors duration-200 w-auto"
                 style={{ backgroundColor: '#912822' }}
               >
                 {t('hero.cta')}
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               
               <a
                 href="https://www.youtube.com/watch?v=1tB1_j6_vg4&ab_channel=FITMostar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-gt-america font-medium text-lg hover:bg-white hover:text-gray-900 transition-colors duration-200 w-full sm:w-auto"
+                className="inline-flex items-center justify-center rounded-md border border-white/80 bg-transparent px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg text-white font-gt-america font-medium hover:bg-white hover:text-gray-900 transition-colors duration-200 w-auto"
               >
-                <Play className="mr-2 w-5 h-5" />
+                <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                 {t('hero.promoVideo') || 'Promo video'}
               </a>
             </div>
