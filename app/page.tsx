@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import ProgramsShowcase from '../components/ProgramsShowcase';
 import NewsSection from '../components/NewsSection';
+import ServicesTools from '../components/ServicesTools';
 import Footer from '../components/Footer';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 
@@ -34,6 +35,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ProgramsShowcase />
+      <ServicesTools />
       <NewsSection />
       <Footer />
     </main>

@@ -16,7 +16,7 @@ export default function OsobljePage() {
     // Nastavnici (Faculty)
     {
       name: 'dr. sc. Denis Mušić',
-      position: 'Vanredni profesor',
+      position: 'associateProfessor',
       image: '/images/osoblje/denis.jpg',
       email: 'denis@edu.fit.ba',
       phone: '+387 36 570 001',
@@ -24,7 +24,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Dragi Tiro',
-      position: 'Redovni profesor',
+      position: 'fullProfessor',
       image: '/images/osoblje/dragi.jpg',
       email: 'dragi.tiro@edu.fit.ba',
       phone: '+387 36 570 002',
@@ -32,7 +32,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Dražena Gašpar',
-      position: 'Redovni profesor',
+      position: 'fullProfessor',
       image: '/images/osoblje/drazena.jpg',
       email: 'drazena.gaspar@edu.fit.ba',
       phone: '+387 36 570 003',
@@ -40,7 +40,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Elmir Babović',
-      position: 'Vanredni profesor',
+      position: 'associateProfessor',
       image: '/images/osoblje/elmir.jpg',
       email: 'elmir.babovic@edu.fit.ba',
       phone: '+387 36 570 004',
@@ -48,7 +48,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Emina Junuz',
-      position: 'Vanredni profesor',
+      position: 'associateProfessor',
       image: '/images/osoblje/emina.jpg',
       email: 'emina@edu.fit.ba',
       phone: '+387 36 570 005',
@@ -56,15 +56,15 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Iris Memić',
-      position: 'Docent',
-      image: '/images/logo-bijeli.png',
+      position: 'assistantProfessor',
+      image: '/images/logo.png',
       email: 'iris@edu.fit.ba', 
       phone: '+387 36 570 006',
       category: 'nastavnici'
     },
     {
       name: 'dr. sc. Migdat Hodžić',
-      position: 'Redovni profesor',
+      position: 'fullProfessor',
       image: '/images/osoblje/migdat.jpg',
       email: 'migdat.hodzic@edu.fit.ba',
       phone: '+387 36 570 007',
@@ -72,7 +72,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Nina Bijedić',
-      position: 'Vanredni profesor',
+      position: 'associateProfessor',
       image: '/images/osoblje/nina.png',
       email: 'nbijedic@edu.fit.ba',
       phone: '+387 36 570 008',
@@ -80,7 +80,7 @@ export default function OsobljePage() {
     },
     {
       name: 'dr. sc. Senad Rahimić',
-      position: 'Redovni profesor',
+      position: 'fullProfessor',
       image: '/images/osoblje/senad.jpg',
       email: 'senad.rahimic@edu.fit.ba',
       phone: '+387 36 570 009',
@@ -89,7 +89,7 @@ export default function OsobljePage() {
     // Saradnici (Associates)
     {
       name: 'mr. sc. Adil Joldić',
-      position: 'Stručnjak iz prakse',
+      position: 'industryExpert',
       image: '/images/osoblje/adil.jpg',
       email: 'adil@edu.fit.ba',
       phone: '+387 36 570 010',
@@ -97,15 +97,15 @@ export default function OsobljePage() {
     },
     {
       name: 'mr. sc. Edina Čmanjčanin',
-      position: 'Viši asistent',
-      image: '/images/logo-bijeli.png',
+      position: 'seniorAssistant',
+      image: '/images/logo.png',
       email: 'edina@edu.fit.ba',
       phone: '+387 36 570 011',
       category: 'saradnici'
     },
     {
       name: 'mr. Elda Sultić Faladžić',
-      position: 'Asistent',
+      position: 'assistant',
       image: '/images/osoblje/elda.jpg',
       email: 'elda@edu.fit.ba',
       phone: '+387 36 570 012',
@@ -113,7 +113,7 @@ export default function OsobljePage() {
     },
     {
       name: 'mr. sc. Goran Škondrić',
-      position: 'Viši asistent',
+      position: 'seniorAssistant',
       image: '/images/osoblje/goran.jpg',
       email: 'goran@edu.fit.ba',
       phone: '+387 36 570 013', 
@@ -121,15 +121,15 @@ export default function OsobljePage() {
     },
     {
       name: 'mr. Kemal Marić',
-      position: 'Asistent',
-      image: '/images/logo-bijeli.png',
+      position: 'assistant',
+      image: '/images/logo.png',
       email: 'kemal@edu.fit.ba',
       phone: '+387 36 570 014',
       category: 'saradnici'
     },
     {
       name: 'Kemal Šanjta',
-      position: 'Stručnjak iz prakse',
+      position: 'industryExpert',
       image: '/images/osoblje/kemal2.jpg',
       email: 'kemal.sanjta@edu.fit.ba',
       phone: '+387 36 570 015',
@@ -137,7 +137,7 @@ export default function OsobljePage() {
     },
     {
       name: 'mr. sc. Mohamed El-Zayat',
-      position: 'Viši asistent',
+      position: 'seniorAssistant',
       image: '/images/osoblje/mohamed.png',
       email: 'mohamed@fit.ba',
       phone: '+387 36 570 016',
@@ -145,7 +145,7 @@ export default function OsobljePage() {
     },
     {
       name: 'mr. sc. Sanja Kapetanović',
-      position: 'Viši asistent',
+      position: 'seniorAssistant',
       image: '/images/osoblje/sanja.jpg',
       email: 'sanja@edu.fit.ba',
       phone: '+387 36 570 017',
@@ -154,16 +154,16 @@ export default function OsobljePage() {
     // Administracija (Administration)
     {
       name: 'Dubravka Plosko, pravnik',
-      position: 'Referent za opšte poslove',
-      image: '/images/logo-bijeli.png',
+      position: 'generalAffairsOfficer',
+      image: '/images/logo.png',
       email: 'dubravka@edu.fit.ba',
       phone: '+387 36 570 018',
       category: 'administracija'
     },
     {
       name: 'Lejla Jazvin',
-      position: 'Referent za studentska pitanja',
-      image: '/images/logo-bijeli.png',
+      position: 'studentAffairsOfficer',
+      image: '/images/logo.png',
       email: 'lejla@edu.fit.ba',
       phone: '+387 36 570 019',
       category: 'administracija'
@@ -251,23 +251,27 @@ export default function OsobljePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100"
+                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100"
                 >
-                  <div className="aspect-square flex items-center justify-center p-4 bg-primary-600">
-                    <Image 
-                      src={member.image} 
-                      alt={member.name}
-                      width={128}
-                      height={128}
-                      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div className="aspect-square flex items-center justify-center p-6 bg-white">
+                    <div className="w-32 h-32 rounded-full border-4 border-primary-400 bg-primary-50 flex items-center justify-center overflow-hidden shadow-inner">
+                      <Image 
+                        src={member.image} 
+                        alt={member.name}
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-sm font-playfair-display font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
-                    <p className="text-xs font-medium mb-1 text-primary-600">{member.position}</p>
-                    <div className="flex items-center space-x-2 text-xs text-gray-600">
-                      <Mail className="w-3 h-3 flex-shrink-0 text-primary-600" />
-                      <span className="truncate">{member.email}</span>
+                  <div className="px-5 pb-5 text-center">
+                    <h3 className="text-base font-playfair-display font-bold text-gray-900 mb-1 leading-tight">{member.name}</h3>
+                    <p className="text-sm font-medium mb-2 text-primary-600">
+                      {t(`staffPositions.${member.position}`) || member.position}
+                    </p>
+                    <div className="inline-flex items-center justify-center space-x-2 text-sm text-gray-600 bg-gray-50 rounded-full px-4 py-1">
+                      <Mail className="w-4 h-4 text-primary-600" />
+                      <span className="truncate max-w-[140px]">{member.email}</span>
                     </div>
                   </div>
                 </motion.div>

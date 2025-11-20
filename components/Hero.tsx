@@ -24,13 +24,17 @@ const Hero = () => {
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col gap-y-3 sm:gap-y-4 md:gap-y-6">
-            <div className="text-center">
-              <div className="font-playfair-display font-bold text-[clamp(28px,7vw,40px)] md:text-5xl lg:text-6xl tracking-tight leading-[1.1] space-y-1.5">
-                <span className="block text-white">{t('hero.welcome') || 'Dobrodošli na'}</span>
-                <span className="block text-primary-100 whitespace-nowrap">Fakultet informacijskih</span>
-                <span className="block text-primary-100">tehnologija</span>
+              <div className="text-center">
+                <div className="font-playfair-display font-bold text-[clamp(28px,7vw,40px)] md:text-5xl lg:text-6xl tracking-tight leading-[1.1] space-y-1.5">
+                  <span className="block text-white">{t('hero.welcome') || 'Dobrodošli na'}</span>
+                  <span className="block text-primary-100 whitespace-nowrap">
+                    {t('hero.titleLine1') || 'Fakultet informacijskih'}
+                  </span>
+                  <span className="block text-primary-100">
+                    {t('hero.titleLine2') || 'tehnologija'}
+                  </span>
+                </div>
               </div>
-            </div>
             
             <p className="text-sm sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-gt-america font-light">
               {t('hero.description')}

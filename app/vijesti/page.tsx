@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, ArrowRight, User, Tag } from 'lucide-react';
+import { Calendar, User } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import Image from 'next/image';

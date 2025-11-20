@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowRight, Code, GraduationCap, Users, Clock, CheckCircle } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 
@@ -11,8 +10,8 @@ const ProgramsShowcase = () => {
     {
       id: 'razvoj-softvera',
       title: t('programs.softwareDevelopment.title') || 'Razvoj softvera',
-      duration: '3 godine',
-      level: 'Prvi ciklus',
+      duration: t('programs.softwareDevelopment.duration') || '3 godine',
+      level: t('programs.softwareDevelopment.level') || 'Prvi ciklus',
       description: t('programs.softwareDevelopment.description') || 'Praktično orijentisan program koji te priprema za rad u IT industriji',
       features: [
         t('programs.softwareDevelopment.features.web') || 'Web razvoj',
@@ -27,8 +26,8 @@ const ProgramsShowcase = () => {
     {
       id: 'softverski-inzenjering',
       title: t('programs.softwareEngineering.title') || 'Softverski inženjering',
-      duration: '4 godine',
-      level: 'Prvi ciklus',
+      duration: t('programs.softwareEngineering.duration') || '4 godine',
+      level: t('programs.softwareEngineering.level') || 'Prvi ciklus',
       description: t('programs.softwareEngineering.description') || 'Duboko znanje softverskog inženjerstva i arhitekture sistema',
       features: [
         t('programs.softwareEngineering.features.architecture') || 'Arhitektura sistema',
@@ -46,7 +45,7 @@ const ProgramsShowcase = () => {
     {
       id: 'jednogodisnji',
       title: t('programs.oneYearMaster.title') || 'Jednogodišnji master',
-      duration: '1 godina',
+      duration: t('programs.oneYearMaster.duration') || '1 godina',
       level: 'Drugi ciklus',
       description: t('programs.oneYearMaster.description') || 'Specijalizacija u oblasti informacijskih tehnologija',
       href: '/studij/jednogodisnji'
@@ -54,7 +53,7 @@ const ProgramsShowcase = () => {
     {
       id: 'dvogodisnji',
       title: t('programs.twoYearMaster.title') || 'Dvogodišnji master',
-      duration: '2 godine',
+      duration: t('programs.twoYearMaster.duration') || '2 godine',
       level: 'Drugi ciklus',
       description: t('programs.twoYearMaster.description') || 'Duboko istraživanje u oblasti IT',
       href: '/studij/dvogodisnji'
@@ -76,7 +75,7 @@ const ProgramsShowcase = () => {
 
         {/* Main Programs */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {programs.map((program, index) => (
+          {programs.map((program) => (
             <div
               key={program.id}
               className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200"
@@ -145,7 +144,7 @@ const ProgramsShowcase = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {masterPrograms.map((program, index) => (
+            {masterPrograms.map((program) => (
               <div
                 key={program.id}
                 className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-200"

@@ -1,6 +1,6 @@
 'use client';
 
-import { Calendar, ArrowRight, User, Tag } from 'lucide-react';
+import { Calendar, ArrowRight, User } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import Image from 'next/image';
@@ -22,10 +22,34 @@ const NewsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
 
+  const monthKeys = [
+    'january',
+    'february',
+    'march',
+    'april',
+    'may',
+    'june',
+    'july',
+    'august',
+    'september',
+    'october',
+    'november',
+    'december',
+  ] as const;
+
+  const formatDate = (isoDate: string) => {
+    const date = new Date(isoDate);
+    const day = date.getUTCDate();
+    const monthKey = monthKeys[date.getUTCMonth()];
+    const monthName = t(`months.${monthKey}`) || monthKey;
+    const year = date.getUTCFullYear();
+    return `${day}. ${monthName} ${year}.`;
+  };
+
   const featuredNews = {
     id: 'featured-1',
     title: t('news.items.vacationTitle'),
-    date: "18. juli 2025.",
+    date: '2025-07-18',
     author: "FIT Mostar",
     category: t('news.categories.announcements'),
     description: t('news.items.vacationExcerpt'),
@@ -37,7 +61,7 @@ const NewsSection = () => {
     {
       id: 'recent-1',
       title: t('news.items.enrollmentTitle'),
-      date: "11. juli 2025.",
+      date: '2025-07-11',
       author: "FIT Mostar",
       category: t('news.categories.announcements'),
       description: t('news.items.enrollmentExcerpt'),
@@ -47,7 +71,7 @@ const NewsSection = () => {
     {
       id: 'recent-2',
       title: t('news.items.rankListTitle'),
-      date: "10. juli 2025.",
+      date: '2025-07-10',
       author: "FIT Mostar",
       category: t('news.categories.enrollment'),
       description: t('news.items.rankListExcerpt'),
@@ -57,7 +81,7 @@ const NewsSection = () => {
     {
       id: 'recent-3',
       title: t('news.items.assistantTitle'),
-      date: "13. januar 2025.",
+      date: '2025-01-13',
       author: "FIT Mostar",
       category: t('news.categories.competition'),
       description: t('news.items.assistantExcerpt'),
@@ -77,7 +101,7 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -116,7 +140,7 @@ const NewsSection = () => {
               <div className="flex items-center text-gray-500 mb-6 space-x-4">
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-medium">{featuredNews.date}</span>
+                  <span className="text-sm font-medium">{formatDate(featuredNews.date)}</span>
                 </div>
                 <span className="text-gray-400">•</span>
                 <div className="flex items-center">
@@ -146,7 +170,7 @@ const NewsSection = () => {
 
         {/* Recent News Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {recentNews.map((news, index) => (
+          {recentNews.map((news) => (
             <div
               key={news.id}
               className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full"
@@ -169,7 +193,7 @@ const NewsSection = () => {
                 <div className="flex items-center text-gray-500 mb-3 space-x-3">
                   <div className="flex items-center">
                     <Calendar className="w-3 h-3 mr-1" />
-                    <span className="text-xs font-medium">{news.date}</span>
+                    <span className="text-xs font-medium">{formatDate(news.date)}</span>
                   </div>
                   <span className="text-gray-400">•</span>
                   <div className="flex items-center">
@@ -251,7 +275,7 @@ const NewsSection = () => {
                       <div className="flex items-center text-gray-500 mb-4 space-x-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">{selectedNews.date}</span>
+                          <span className="text-sm font-medium">{formatDate(selectedNews.date)}</span>
                         </div>
                         <span className="text-gray-400">•</span>
                         <div className="flex items-center">

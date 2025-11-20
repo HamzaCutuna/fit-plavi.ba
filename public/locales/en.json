@@ -39,6 +39,8 @@
   "hero": {
     "badge": "Discover our faculty",
     "welcome": "Welcome to",
+    "titleLine1": "Faculty of Information",
+    "titleLine2": "Technologies",
     "title": "Faculty of Information Technology",
     "subtitle": "University \"Džemal Bijedić\" in Mostar",
     "description": "The future starts here. Modern studies adapted to the digital age.",
@@ -87,6 +89,8 @@
     "softwareDevelopment": {
       "title": "Software Development",
       "description": "Practically oriented program that prepares you for work in the IT industry",
+      "duration": "3 years",
+      "level": "First cycle",
       "features": {
         "web": "Web development",
         "mobile": "Mobile applications",
@@ -97,6 +101,8 @@
     "softwareEngineering": {
       "title": "Software Engineering",
       "description": "Deep knowledge of software engineering and system architecture with advanced algorithms and structures",
+      "duration": "4 years",
+      "level": "First cycle",
       "features": {
         "architecture": "System architecture",
         "algorithms": "Artificial intelligence",
@@ -106,11 +112,13 @@
     },
     "oneYearMaster": {
       "title": "One-year Master",
-      "description": "Specialization in the field of information technology"
+      "description": "Specialization in the field of information technology",
+      "duration": "1 year"
     },
     "twoYearMaster": {
       "title": "Two-year Master",
-      "description": "Deep research in the field of IT"
+      "description": "Deep research in the field of IT",
+      "duration": "2 years"
     },
     "master": {
       "title": "Master Studies",
@@ -138,6 +146,37 @@
       "rankListExcerpt": "The final ranking list for enrollment of candidates in the first year of the first cycle of studies has been published.",
       "assistantTitle": "Competition for selection of associate in the title of assistant",
       "assistantExcerpt": "A competition for the selection of associates in the title of assistant at the Faculty of Information Technology is open."
+    }
+  },
+  "servicesTools": {
+    "title": "Services and tools",
+    "description": "The most frequently used faculty services are available with a single click.",
+    "cards": {
+      "dlwms": {
+        "title": "DLWMS",
+        "description": "Browse announcements, download teaching materials, register exams and take tests.",
+        "instructions": "Log in with your index number and password.",
+        "linkLabel": "Log in to DLWMS"
+      },
+      "devTools": {
+        "title": "Dev Tools",
+        "description": "Access Microsoft’s development environment for students and lecturers within the Azure Dev Tools for Teaching program.",
+        "instructions": "Use your ime.prezime@edu.fit.ba address.",
+        "linkLabel": "Access Dev Tools"
+      },
+      "office365": {
+        "title": "Office 365",
+        "description": "Email, Office Online, OneDrive, Yammer and SharePoint with the option to install Office apps on five devices.",
+        "instructions": "Sign in with your faculty email address.",
+        "linkLabel": "Open Office 365"
+      },
+      "vps": {
+        "title": "VPS",
+        "description": "Server for student projects with services assigned by course leaders.",
+        "instructions": "Access credentials are provided by lecturers.",
+        "linkLabel": "Open VPS",
+        "resourcesTitle": "Available services"
+      }
     }
   },
   "footer": {
@@ -287,6 +326,16 @@
       "phone": "Phone",
       "address": "Address"
     }
+  },
+  "staffPositions": {
+    "associateProfessor": "Associate Professor",
+    "fullProfessor": "Full Professor",
+    "assistantProfessor": "Assistant Professor",
+    "industryExpert": "Industry Expert",
+    "seniorAssistant": "Senior Assistant",
+    "assistant": "Assistant",
+    "generalAffairsOfficer": "General Affairs Officer",
+    "studentAffairsOfficer": "Student Affairs Officer"
   },
   "studij": {
     "dvogodisnji": {

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { DollarSign, RefreshCw, FileText, Clock, CreditCard, AlertCircle, Download } from 'lucide-react';
+import { RefreshCw, FileText, Clock, CreditCard, AlertCircle, Download } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useTranslation } from '../../../contexts/LanguageContext';

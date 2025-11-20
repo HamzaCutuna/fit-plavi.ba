@@ -39,6 +39,8 @@
   "hero": {
     "badge": "Upoznajte naš fakultet",
     "welcome": "Dobrodošli na",
+    "titleLine1": "Fakultet informacijskih",
+    "titleLine2": "tehnologija",
     "title": "Fakultet informacijskih tehnologija",
     "subtitle": "Univerzitet \"Džemal Bijedić\" u Mostaru",
     "description": "Budućnost počinje ovdje. Savremeni studij prilagođen digitalnom dobu.",
@@ -87,6 +89,8 @@
     "softwareDevelopment": {
       "title": "Razvoj softvera",
       "description": "Praktično orijentisan program koji te priprema za rad u IT industriji",
+      "duration": "3 godine",
+      "level": "Prvi ciklus",
       "features": {
         "web": "Web razvoj",
         "mobile": "Mobilne aplikacije",
@@ -97,6 +101,8 @@
     "softwareEngineering": {
       "title": "Softverski inženjering",
       "description": "Duboko znanje softverskog inženjerstva i arhitekture sistema uz napredne algoritme i strukture",
+      "duration": "4 godine",
+      "level": "Prvi ciklus",
       "features": {
         "architecture": "Arhitektura sistema",
         "algorithms": "Umjetna inteligencija",
@@ -106,11 +112,13 @@
     },
     "oneYearMaster": {
       "title": "Jednogodišnji master",
-      "description": "Specijalizacija u oblasti informacijskih tehnologija"
+      "description": "Specijalizacija u oblasti informacijskih tehnologija",
+      "duration": "1 godina"
     },
     "twoYearMaster": {
       "title": "Dvogodišnji master",
-      "description": "Duboko istraživanje u oblasti IT"
+      "description": "Duboko istraživanje u oblasti IT",
+      "duration": "2 godine"
     },
     "master": {
       "title": "Master studiji",
@@ -138,6 +146,37 @@
       "rankListExcerpt": "Objavljena je konačna rang lista za upis kandidata u prvu godinu prvog ciklusa studija.",
       "assistantTitle": "Konkurs za izbor saradnika u zvanje asistent",
       "assistantExcerpt": "Otvoren je konkurs za izbor saradnika u zvanje asistent na Fakultetu informacijskih tehnologija."
+    }
+  },
+  "servicesTools": {
+    "title": "Servisi i alati",
+    "description": "Najčešće korišteni fakultetski servisi dostupni su jednim klikom.",
+    "cards": {
+      "dlwms": {
+        "title": "DLWMS",
+        "description": "Pregledajte obavijesti, preuzmite nastavne materijale, prijavite ispite i polažite testove.",
+        "instructions": "Prijavite se brojem indeksa i lozinkom.",
+        "linkLabel": "Prijavite se na DLWMS"
+      },
+      "devTools": {
+        "title": "Dev Tools",
+        "description": "Pristup Microsoft razvojnom okruženju za studente i nastavnike u okviru Azure Dev Tools for Teaching programa.",
+        "instructions": "Koristite adresu ime.prezime@edu.fit.ba.",
+        "linkLabel": "Pristupite Dev Tools"
+      },
+      "office365": {
+        "title": "Office 365",
+        "description": "E-mail, Office Online, OneDrive, Yammer i SharePoint uz mogućnost instalacije Office aplikacija na pet uređaja.",
+        "instructions": "Prijavite se fakultetskom e-mail adresom.",
+        "linkLabel": "Otvorite Office 365"
+      },
+      "vps": {
+        "title": "VPS",
+        "description": "Server za studentske projekte sa servisima koje voditelji kolegija dodjeljuju studentima.",
+        "instructions": "Login podatke dobijate od nastavnika.",
+        "linkLabel": "Otvorite VPS",
+        "resourcesTitle": "Dostupni servisi"
+      }
     }
   },
   "footer": {
@@ -287,6 +326,16 @@
       "phone": "Telefon",
       "address": "Adresa"
     }
+  },
+  "staffPositions": {
+    "associateProfessor": "Vanredni profesor",
+    "fullProfessor": "Redovni profesor",
+    "assistantProfessor": "Docent",
+    "industryExpert": "Stručnjak iz prakse",
+    "seniorAssistant": "Viši asistent",
+    "assistant": "Asistent",
+    "generalAffairsOfficer": "Referent za opšte poslove",
+    "studentAffairsOfficer": "Referent za studentska pitanja"
   },
   "studij": {
     "dvogodisnji": {
