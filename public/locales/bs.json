@@ -100,7 +100,7 @@
     },
     "softwareEngineering": {
       "title": "Softverski inženjering",
-      "description": "Duboko znanje softverskog inženjerstva i arhitekture sistema uz napredne algoritme i strukture",
+      "description": "Napredno znanje softverskog inženjerstva i arhitekture sistema uz napredne algoritme i strukture",
       "duration": "4 godine",
       "level": "Prvi ciklus",
       "features": {
@@ -117,7 +117,7 @@
     },
     "twoYearMaster": {
       "title": "Dvogodišnji master",
-      "description": "Duboko istraživanje u oblasti IT",
+      "description": "Napredno istraživanje u oblasti IT-a",
       "duration": "2 godine"
     },
     "master": {
