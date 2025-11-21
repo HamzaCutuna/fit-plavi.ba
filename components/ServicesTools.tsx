@@ -88,31 +88,27 @@ const ServicesTools = () => {
           {services.map((service) => (
             <article
               key={service.id}
-              className="rounded-3xl border border-primary-100 bg-white p-6 flex flex-col gap-5 shadow-sm"
+              className="rounded-lg border border-gray-200 bg-white p-6 flex flex-col gap-5 shadow-sm"
             >
               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center text-primary-700">
+                <div className="h-12 w-12 rounded bg-primary-50 border border-primary-100 flex items-center justify-center text-primary-700">
                   <service.Icon className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-playfair-display font-semibold text-primary-900 leading-tight">{service.title}</h3>
+                  <h3 className="text-2xl font-playfair-display font-semibold text-black leading-tight">{service.title}</h3>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-primary-800">
+              <p className="text-gt-america leading-relaxed text-gray-700">
                 {service.description}
               </p>
               {service.instructions && (
-                <p className="text-sm font-semibold text-primary-700">
+                <p className="text-gt-america font-semibold text-gray-700">
                   {service.instructions}
                 </p>
               )}
               {service.resources && (
                 <div className="mt-2">
-                  {service.resourcesTitle && (
-                    <p className="text-xs font-semibold uppercase tracking-wide mb-2 text-primary-600">
-                      {service.resourcesTitle}
-                    </p>
-                  )}
+                  
                   <ul className="space-y-1 text-sm">
                     {service.resources.map((resource) => (
                       <li key={resource.label}>
@@ -120,7 +116,7 @@ const ServicesTools = () => {
                           href={resource.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-primary-800 hover:text-primary-600 underline-offset-4"
+                          className="inline-flex items-center gap-2 text-gray-700 hover:text-primary-600 underline-offset-4"
                         >
                           {resource.label}
                           <ArrowUpRight className="w-4 h-4" />
